@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
+@theme {
+  /* Brand palette — forest greens, warm sand neutrals, gold accent */
+  --color-forest-950: #0f211a;
+  --color-forest-900: #16301f;
+  --color-forest-800: #1f3a2e;
+  --color-forest-700: #2d5443;
+  --color-forest-600: #3f6b56;
+  --color-forest-500: #547e69;
+
+  --color-sand-50: #faf7f0;
+  --color-sand-100: #f5f1e8;
+  --color-sand-200: #ece3d2;
+  --color-sand-300: #ddd0b8;
+
+  --color-gold-500: #c5a572;
+  --color-gold-600: #b8935a;
+  --color-gold-400: #d6bd92;
+
+  --color-ink: #1a1d1a;
+  --color-stone-soft: #6b6f68;
+
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --tracking-wider2: 0.18em;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf7f0;
+  --foreground: #1a1d1a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility: the small uppercase gold eyebrow used across sections */
+.eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: var(--tracking-wider2);
+  text-transform: uppercase;
+  color: var(--color-gold-600);
+  font-weight: 600;
+}
+
+/* Thin scrollbar for horizontal carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
