@@ -22,7 +22,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-950/40 to-forest-950/80" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-sand-50">
-          <p className="eyebrow text-gold-400">Taleghar · Bhimashankar · Pune</p>
+          <p className="eyebrow text-gold-400">Taleghar · Bhimashankar</p>
           <h1 className="mt-5 font-serif text-4xl font-semibold leading-tight sm:text-6xl md:text-7xl">
             Bhimashankar&apos;s Jungle Luxury Resort
           </h1>
@@ -97,10 +97,10 @@ export default function Home() {
           <Reveal delay={0.15}>
             <div className="grid grid-cols-2 gap-4">
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
-                <Image src="/images/brochure/valley-mist.jpg" alt="Mist over the Sahyadri valley at Eshi Resorts" fill sizes="33vw" className="object-cover" />
+                <Image src="/images/gallery/room-2.jpg" alt="Luxurious room with valley view and private jacuzzi" fill sizes="33vw" className="object-cover" />
               </div>
               <div className="relative mt-8 aspect-[3/4] overflow-hidden rounded-2xl">
-                <Image src="/images/brochure/forest-trail.jpg" alt="Misty jungle trail through the forest" fill sizes="33vw" className="object-cover" />
+                <Image src="/images/brochure/valley-mist.jpg" alt="Mist over the Sahyadri valley" fill sizes="33vw" className="object-cover" />
               </div>
             </div>
           </Reveal>
