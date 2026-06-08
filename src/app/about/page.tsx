@@ -60,8 +60,8 @@ export default function AboutPage() {
           <Reveal delay={0.15}>
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
               <Image
-                src="/images/gallery/room-2.jpg"
-                alt="Luxury room with valley view and private jacuzzi at Eshi Resorts"
+                src="/images/brochure/green-hills.jpg"
+                alt="Mist-covered green hills and walkway at Eshi Resorts"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"

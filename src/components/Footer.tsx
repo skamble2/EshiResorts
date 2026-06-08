@@ -36,6 +36,16 @@ export default function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href={site.brochureUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sand-200/80 transition-colors hover:text-gold-400"
+              >
+                Download Brochure
+              </a>
+            </li>
           </ul>
         </div>
 

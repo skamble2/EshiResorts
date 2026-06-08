@@ -1,3 +1,15 @@
+export type AmenityKey =
+  | "ac"
+  | "wifi"
+  | "television"
+  | "parking"
+  | "dining"
+  | "bathtub"
+  | "fridge"
+  | "mountain-view"
+  | "jungle-view"
+  | "safety";
+
 export type Room = {
   slug: string;
   name: string;
@@ -5,16 +17,30 @@ export type Room = {
   image: string;
   view: string;
   blurb: string;
-  amenities: string[];
+  amenities: AmenityKey[];
 };
 
-const base = [
-  "Air Conditioning",
-  "Free WiFi",
-  "Television",
-  "Secure Parking",
-  "Multi-cuisine Dining",
-];
+// Maps each amenity to its icon (from the resort's own icon set) and label.
+export const amenityMeta: Record<AmenityKey, { icon: string; label: string }> = {
+  ac: { icon: "/images/amenities/ac.png", label: "Air Conditioning" },
+  wifi: { icon: "/images/amenities/wifi.svg", label: "Free WiFi" },
+  television: { icon: "/images/amenities/television.svg", label: "Television" },
+  parking: { icon: "/images/amenities/parking.svg", label: "Secure Parking" },
+  dining: { icon: "/images/amenities/dining.svg", label: "Multi-cuisine Dining" },
+  bathtub: { icon: "/images/amenities/bathtub.svg", label: "Bathtub" },
+  fridge: { icon: "/images/amenities/fridge.png", label: "Refrigerator" },
+  "mountain-view": {
+    icon: "/images/amenities/mountain-view.svg",
+    label: "Mountain View",
+  },
+  "jungle-view": {
+    icon: "/images/amenities/jungle-view.png",
+    label: "Jungle View",
+  },
+  safety: { icon: "/images/amenities/safety.svg", label: "Privacy & Safety" },
+};
+
+const base: AmenityKey[] = ["ac", "wifi", "television", "parking", "dining"];
 
 export const rooms: Room[] = [
   {
@@ -25,7 +51,7 @@ export const rooms: Room[] = [
     view: "Mountain View",
     blurb:
       "Wake to sweeping Sahyadri ridgelines from our most coveted room - a king bed, a deep bathtub and uninterrupted valley vistas.",
-    amenities: [...base, "Bathtub", "Refrigerator", "Mountain Views"],
+    amenities: [...base, "bathtub", "fridge", "mountain-view"],
   },
   {
     slug: "king-room-with-balcony",
@@ -35,7 +61,7 @@ export const rooms: Room[] = [
     view: "Jungle View",
     blurb:
       "Step onto your private balcony and breathe in the jungle. A spacious king retreat with a bathtub and refrigerator for slow, luxurious mornings.",
-    amenities: [...base, "Private Balcony", "Bathtub", "Refrigerator", "Jungle Views"],
+    amenities: [...base, "bathtub", "fridge", "jungle-view"],
   },
   {
     slug: "deluxe-room-with-balcony",
@@ -45,7 +71,7 @@ export const rooms: Room[] = [
     view: "Balcony",
     blurb:
       "A refined deluxe room opening to a private balcony - generous space, soft light and the calm of the surrounding forest.",
-    amenities: [...base, "Private Balcony"],
+    amenities: [...base, "safety"],
   },
   {
     slug: "superior-king-room",
@@ -55,7 +81,7 @@ export const rooms: Room[] = [
     view: "King Comfort",
     blurb:
       "Understated comfort with a plush king bed and all the essentials - an easy, elegant base for your Bhimashankar escape.",
-    amenities: [...base],
+    amenities: [...base, "safety"],
   },
   {
     slug: "standard-double-room",
@@ -65,7 +91,7 @@ export const rooms: Room[] = [
     view: "Cosy Retreat",
     blurb:
       "Our most accessible room without compromise - comfortable, private and perfectly placed for exploring the valley.",
-    amenities: ["Free WiFi", "Television", "Secure Parking", "Multi-cuisine Dining"],
+    amenities: ["wifi", "television", "parking", "dining", "safety"],
   },
 ];
 

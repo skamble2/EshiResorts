@@ -35,10 +35,13 @@ export const site = {
 
   logo: "/images/home/header-logo.png", // black wordmark; inverted to white on dark bg
 
+  brochureUrl: "/files/eshi-resorts-brochure.pdf",
+
   nav: [
     { label: "Home", href: "/" },
     { label: "Rooms", href: "/rooms" },
     { label: "About", href: "/about" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Reviews", href: "/reviews" },
     { label: "Contact", href: "/contact" },
   ],

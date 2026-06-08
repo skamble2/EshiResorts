@@ -1,42 +1,42 @@
 export const stats = [
-  { value: "510", label: "Sq Ft Rooms" },
+  { value: "900m", label: "Above Sea Level" },
   { value: "5", label: "Signature Stays" },
-  { value: "100%", label: "Valley & Jungle Views" },
+  { value: "510", label: "Sq Ft Rooms" },
   { value: "24/7", label: "Guest Support" },
 ];
 
 export const experiences = [
   {
-    title: "Stay in the Wild",
-    body: "Opulent rooms framed by mountain and jungle - privacy, comfort and quiet luxury at the edge of Bhimashankar's forest.",
-    image: "/images/gallery/room-3.jpg",
+    title: "Soul-Stirring Jungle Walks",
+    body: "Set out on guided forest trails at nearly 900 m above sea level - misty canopies, hidden waterfalls and the distant call of wildlife through the Western Ghats.",
+    image: "/images/brochure/jungle-walk.jpg",
   },
   {
-    title: "Dine at Cafe@100",
-    body: "Multi-cuisine dining crafted from fresh, local produce - long valley-view breakfasts and warm evenings by the garden.",
-    image: "/images/gallery/exterior-6.jpg",
+    title: "A Culinary Journey",
+    body: "At Eshi Restaurant, dining becomes a celebration of flavour and nature - rustic elegance, expansive windows and fresh mountain air with every meal.",
+    image: "/images/brochure/restaurant.jpg",
   },
   {
-    title: "Explore Bhimashankar",
-    body: "Ancient temples, dense Western Ghats wildlife sanctuary and waterfall trails - adventure begins right at your doorstep.",
-    image: "/images/gallery/wildlife-1.jpg",
+    title: "Sunset Views, Soulful Moments",
+    body: "Watch the sky melt from soft orange to deep crimson over the rolling hills of Bhimashankar - an unforgettable daily ritual where nature puts on its grandest show.",
+    image: "/images/brochure/sunset.jpg",
   },
   {
-    title: "Gather & Celebrate",
-    body: "Events, parties and camping in the open air - let the valley be the backdrop for your most memorable occasions.",
-    image: "/images/gallery/garden-1.jpg",
+    title: "Weddings & Gatherings",
+    body: "Cradled in mist-kissed mountains, Eshi is a canvas of serenity and romance - perfect for destination weddings, celebrations and cherished family gatherings.",
+    image: "/images/brochure/green-hills.jpg",
   },
 ];
 
 export const amenities = [
   "Air Conditioning",
   "Free WiFi",
-  "Multi-cuisine Restaurant",
+  "Eshi Restaurant",
   "Secure Parking",
   "Mountain & Jungle Views",
-  "Bathtubs & Refrigerators",
-  "Catering & Events",
-  "24/7 Customer Support",
+  "Jacuzzi Bathtubs",
+  "Library & Games",
+  "Bicycles & Jungle Walks",
 ];
 
 // Home highlights real guest feedback; the full list lives on /reviews.

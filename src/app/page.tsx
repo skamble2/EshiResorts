@@ -97,10 +97,10 @@ export default function Home() {
           <Reveal delay={0.15}>
             <div className="grid grid-cols-2 gap-4">
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
-                <Image src="/images/home/home-sec1.jpg" alt="Resort grounds" fill sizes="33vw" className="object-cover" />
+                <Image src="/images/brochure/valley-mist.jpg" alt="Mist over the Sahyadri valley at Eshi Resorts" fill sizes="33vw" className="object-cover" />
               </div>
               <div className="relative mt-8 aspect-[3/4] overflow-hidden rounded-2xl">
-                <Image src="/images/gallery/garden-2.jpg" alt="Garden views" fill sizes="33vw" className="object-cover" />
+                <Image src="/images/brochure/forest-trail.jpg" alt="Misty jungle trail through the forest" fill sizes="33vw" className="object-cover" />
               </div>
             </div>
           </Reveal>
@@ -225,8 +225,8 @@ export default function Home() {
       {/* ---------------- Final CTA ---------------- */}
       <section className="relative overflow-hidden">
         <Image
-          src="/images/gallery/exterior-1.jpg"
-          alt="Eshi Resorts entrance in the jungle"
+          src="/images/brochure/sunset.jpg"
+          alt="Golden sunset over the hills at Eshi Resorts"
           fill
           className="object-cover"
         />
