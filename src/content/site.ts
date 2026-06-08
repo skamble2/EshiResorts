@@ -3,7 +3,7 @@ export const site = {
   legalName: "Eshi Resorts & Restaurant",
   tagline: "Bhimashankar's Jungle Luxury Resort",
   description:
-    "A luxury jungle resort in Taleghar, Bhimashankar — where opulent accommodation meets the untouched splendour of the Sahyadri valley. Mountain views, multi-cuisine dining and unforgettable escapes near Pune.",
+    "A luxury jungle resort in Taleghar, Bhimashankar - where opulent accommodation meets the untouched splendour of the Sahyadri valley. Mountain views, multi-cuisine dining and unforgettable escapes near Pune.",
   url: "https://eshiresorts.com",
 
   phone: "+91 9309314374",
@@ -12,21 +12,34 @@ export const site = {
   email: "admin@eshiresorts.com",
 
   address: {
-    line: "Taleghar, Rajgurunagar–Bhimashankar Road",
+    line: "Rajgurunagar, Bhimashankar - Manchar Rd, Ambegaon, Tale Ghar",
     city: "Pune",
     state: "Maharashtra",
-    full: "Taleghar, Rajgurunagar–Bhimashankar Road, Pune, Maharashtra",
+    pin: "410509",
+    full: "Eshi Resorts and Restaurant, Rajgurunagar, Bhimashankar - Manchar Rd, Ambegaon, Tale Ghar, Maharashtra 410509",
   },
 
-  // Booking handoff — Aiosell backend (no API for now, just deep-link)
+  // Booking handoff - Aiosell backend (no API for now, just deep-link)
   bookingUrl: "https://be.aiosell.com/book/b507a08c7d",
 
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Eshi+Resorts+Bhimashankar",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Eshi+Resorts+and+Restaurant+Bhimashankar+Manchar+Road+Ambegaon+Tale+Ghar",
+  mapsEmbedQuery:
+    "Eshi Resorts and Restaurant, Bhimashankar - Manchar Rd, Ambegaon, Tale Ghar, Maharashtra 410509",
+
+  // Verified ratings (for the reviews page) - update as they grow
+  ratings: {
+    booking: { score: "8.6", count: 123 },
+    tripadvisor: { score: "5.0", count: 2 },
+  },
+
+  logo: "/images/home/header-logo.png", // black wordmark; inverted to white on dark bg
 
   nav: [
     { label: "Home", href: "/" },
     { label: "Rooms", href: "/rooms" },
     { label: "About", href: "/about" },
+    { label: "Reviews", href: "/reviews" },
     { label: "Contact", href: "/contact" },
   ],
 } as const;

@@ -7,13 +7,13 @@ import BookNowButton from "@/components/BookNowButton";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Eshi Resorts blends luxury with the wild in the Sahyadri valley at Taleghar, Bhimashankar — opulent stays, dining, events and adventure.",
+    "Eshi Resorts blends luxury with the wild in the Sahyadri valley at Taleghar, Bhimashankar - opulent stays, dining, events and adventure.",
 };
 
 const pillars = [
   {
     title: "Event & Party",
-    body: "Celebrate against a backdrop of valley and jungle — intimate gatherings to memorable occasions.",
+    body: "Celebrate against a backdrop of valley and jungle - intimate gatherings to memorable occasions.",
   },
   {
     title: "Restaurant",
@@ -31,7 +31,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Our Story"
         title="Where luxury meets the wild"
-        subtitle="Nestled in Taleghar, Bhimashankar — a harmonious blend of opulence and untouched nature."
+        subtitle="Nestled in Taleghar, Bhimashankar - a harmonious blend of opulence and untouched nature."
         image="/images/gallery/exterior-4.jpg"
       />
 
@@ -43,7 +43,7 @@ export default function AboutPage() {
               An escape into the Sahyadri valley
             </h2>
             <p className="mt-6 text-base leading-relaxed text-stone-soft">
-              Nestled in Taleghar on the Rajgurunagar–Bhimashankar road, Eshi
+              Nestled in Taleghar on the Rajgurunagar-Bhimashankar road, Eshi
               Resorts offers luxurious accommodation and scenic views where
               luxury meets the wild. Our resort offers a harmonious blend of
               luxury and adventure.
@@ -60,8 +60,8 @@ export default function AboutPage() {
           <Reveal delay={0.15}>
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
               <Image
-                src="/images/home/home-sec2.jpg"
-                alt="Eshi Resorts surroundings"
+                src="/images/gallery/room-2.jpg"
+                alt="Luxury room with valley view and private jacuzzi at Eshi Resorts"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -102,7 +102,7 @@ export default function AboutPage() {
             Come experience it for yourself
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-stone-soft">
-            We don&apos;t just offer a room — we create unforgettable experiences
+            We don&apos;t just offer a room - we create unforgettable experiences
             that last a lifetime.
           </p>
           <div className="mt-8">

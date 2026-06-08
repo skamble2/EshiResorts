@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { site } from "@/content/site";
@@ -33,13 +34,17 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="flex flex-col leading-none">
-          <span className="font-serif text-xl font-semibold tracking-wide text-sand-50 sm:text-2xl">
-            Eshi Resorts
-          </span>
-          <span className="text-[0.6rem] uppercase tracking-[0.25em] text-gold-400">
-            Bhimashankar
-          </span>
+        <Link href="/" aria-label="Eshi Resorts home" className="flex items-center">
+          <Image
+            src={site.logo}
+            alt="Eshi Resorts"
+            width={808}
+            height={309}
+            priority
+            className={`w-auto brightness-0 invert transition-all duration-300 ${
+              transparent ? "h-12 sm:h-14" : "h-10 sm:h-12"
+            }`}
+          />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">

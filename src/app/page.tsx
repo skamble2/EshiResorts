@@ -74,13 +74,13 @@ export default function Home() {
               A harmonious blend of luxury and the wild
             </h2>
             <p className="mt-6 text-base leading-relaxed text-stone-soft">
-              Nestled in Taleghar on the Rajgurunagar–Bhimashankar road, Eshi
+              Nestled in Taleghar on the Rajgurunagar-Bhimashankar road, Eshi
               Resorts offers luxurious accommodation and scenic views where
               luxury meets the wild. Unwind in our opulent rooms, explore the
               vibrant jungle, or simply relax by the tranquil valley.
             </p>
             <p className="mt-4 text-base leading-relaxed text-stone-soft">
-              We don&apos;t just offer a room — we create unforgettable
+              We don&apos;t just offer a room - we create unforgettable
               experiences that last a lifetime.
             </p>
             <div className="mt-8">
@@ -116,7 +116,7 @@ export default function Home() {
               Our Signature Rooms
             </h2>
             <p className="mt-4 text-base leading-relaxed text-stone-soft">
-              Five distinct retreats — each 510 sq ft, with a king bed and views
+              Five distinct retreats - each 510 sq ft, with a king bed and views
               that change with the light.
             </p>
           </Reveal>
@@ -210,6 +210,15 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/reviews"
+              className="inline-flex items-center justify-center rounded-full border border-sand-50/30 px-8 py-3 text-sm font-semibold text-sand-50 transition-colors hover:bg-sand-50/10"
+            >
+              Read All Reviews
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -228,7 +237,7 @@ export default function Home() {
               Your jungle escape begins here
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-sand-100/90">
-              Reserve your stay at Eshi Resorts, or talk to us directly — we&apos;d
+              Reserve your stay at Eshi Resorts, or talk to us directly - we&apos;d
               love to help plan your getaway.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">

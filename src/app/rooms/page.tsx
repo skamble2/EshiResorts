@@ -16,7 +16,7 @@ export default function RoomsPage() {
       <PageHero
         eyebrow="Accommodation"
         title="Rooms & Suites"
-        subtitle="Five distinct retreats — each 510 sq ft with a king bed, framed by mountain and jungle."
+        subtitle="Five distinct retreats - each 510 sq ft with a king bed, framed by mountain and jungle."
         image="/images/gallery/room-1.jpg"
       />
 

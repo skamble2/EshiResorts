@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette — forest greens, warm sand neutrals, gold accent */
+  /* Brand palette - forest greens, warm sand neutrals, gold accent */
   --color-forest-950: #0f211a;
   --color-forest-900: #16301f;
   --color-forest-800: #1f3a2e;

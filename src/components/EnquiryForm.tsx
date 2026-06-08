@@ -22,7 +22,7 @@ export default function EnquiryForm() {
     const data = new FormData(form);
 
     if (WEB3FORMS_KEY.startsWith("REPLACE")) {
-      // No key configured yet — fall back to a pre-filled WhatsApp message.
+      // No key configured yet - fall back to a pre-filled WhatsApp message.
       const msg = `Enquiry from ${data.get("name")} (${data.get(
         "phone"
       )}): ${data.get("message")}`;
@@ -87,7 +87,7 @@ export default function EnquiryForm() {
         name="message"
         required
         rows={4}
-        placeholder="Tell us about your stay — dates, guests, occasion…"
+        placeholder="Tell us about your stay - dates, guests, occasion…"
         className={field}
       />
       <button

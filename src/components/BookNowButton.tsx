@@ -8,7 +8,7 @@ type Props = {
 
 /**
  * Central booking CTA. Hands off to the Aiosell booking engine.
- * (No availability API for now — single source of truth for the booking link.)
+ * (No availability API for now - single source of truth for the booking link.)
  */
 export default function BookNowButton({ className = "", children }: Props) {
   return (

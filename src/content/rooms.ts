@@ -24,7 +24,7 @@ export const rooms: Room[] = [
     image: "/images/rooms/king-room-with-mountain-view.jpeg",
     view: "Mountain View",
     blurb:
-      "Wake to sweeping Sahyadri ridgelines from our most coveted room — a king bed, a deep bathtub and uninterrupted valley vistas.",
+      "Wake to sweeping Sahyadri ridgelines from our most coveted room - a king bed, a deep bathtub and uninterrupted valley vistas.",
     amenities: [...base, "Bathtub", "Refrigerator", "Mountain Views"],
   },
   {
@@ -44,7 +44,7 @@ export const rooms: Room[] = [
     image: "/images/rooms/deluxe-room-with-balcony.jpeg",
     view: "Balcony",
     blurb:
-      "A refined deluxe room opening to a private balcony — generous space, soft light and the calm of the surrounding forest.",
+      "A refined deluxe room opening to a private balcony - generous space, soft light and the calm of the surrounding forest.",
     amenities: [...base, "Private Balcony"],
   },
   {
@@ -54,7 +54,7 @@ export const rooms: Room[] = [
     image: "/images/rooms/superior-king-room.jpeg",
     view: "King Comfort",
     blurb:
-      "Understated comfort with a plush king bed and all the essentials — an easy, elegant base for your Bhimashankar escape.",
+      "Understated comfort with a plush king bed and all the essentials - an easy, elegant base for your Bhimashankar escape.",
     amenities: [...base],
   },
   {
@@ -64,7 +64,7 @@ export const rooms: Room[] = [
     image: "/images/rooms/standard-double-room.jpeg",
     view: "Cosy Retreat",
     blurb:
-      "Our most accessible room without compromise — comfortable, private and perfectly placed for exploring the valley.",
+      "Our most accessible room without compromise - comfortable, private and perfectly placed for exploring the valley.",
     amenities: ["Free WiFi", "Television", "Secure Parking", "Multi-cuisine Dining"],
   },
 ];

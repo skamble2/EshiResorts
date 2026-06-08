@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site, whatsappLink } from "@/content/site";
 
 export default function Footer() {
@@ -6,15 +7,19 @@ export default function Footer() {
     <footer className="bg-forest-950 text-sand-100">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:px-8 md:grid-cols-4">
         <div className="md:col-span-2">
-          <span className="font-serif text-2xl font-semibold text-sand-50">
-            Eshi Resorts
-          </span>
-          <p className="mt-1 text-xs uppercase tracking-[0.25em] text-gold-400">
+          <Image
+            src={site.logo}
+            alt="Eshi Resorts"
+            width={808}
+            height={309}
+            className="h-14 w-auto brightness-0 invert"
+          />
+          <p className="mt-4 text-xs uppercase tracking-[0.25em] text-gold-400">
             {site.tagline}
           </p>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-sand-200/80">
             Where luxury meets the wild. Nestled in the Sahyadri valley at
-            Taleghar, Bhimashankar — your escape into nature awaits.
+            Taleghar, Bhimashankar - your escape into nature awaits.
           </p>
         </div>
 
