@@ -3,6 +3,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import RoomCard from "@/components/RoomCard";
 import BookNowButton from "@/components/BookNowButton";
+import HeroSlideshow from "@/components/HeroSlideshow";
 import { site, whatsappLink } from "@/content/site";
 import { rooms } from "@/content/rooms";
 import { stats, experiences, amenities, testimonials } from "@/content/home";
@@ -12,14 +13,8 @@ export default function Home() {
     <>
       {/* ---------------- Hero ---------------- */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
-        <Image
-          src="/images/gallery/exterior-4.jpg"
-          alt="Aerial view of Eshi Resorts villas in the Bhimashankar valley"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-950/40 to-forest-950/80" />
+        <HeroSlideshow />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-950/40 to-forest-950/80" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-sand-50">
           <p className="eyebrow text-gold-400">Taleghar · Bhimashankar</p>
