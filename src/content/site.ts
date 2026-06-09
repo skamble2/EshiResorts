@@ -42,6 +42,7 @@ export const site = {
     { label: "Rooms", href: "/rooms" },
     { label: "About", href: "/about" },
     { label: "Gallery", href: "/gallery" },
+    { label: "Blog", href: "/blog" },
     { label: "Reviews", href: "/reviews" },
     { label: "Contact", href: "/contact" },
   ],
