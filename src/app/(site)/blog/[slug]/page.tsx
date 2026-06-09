@@ -9,7 +9,7 @@ import { urlForImage } from "@/sanity/image";
 import { postBySlugQuery, postSlugsQuery } from "@/sanity/queries";
 import { type Post, formatDate } from "@/sanity/types";
 
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   const slugs = await client.fetch<{ slug: string }[]>(postSlugsQuery);

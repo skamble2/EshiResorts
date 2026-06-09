@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     "Stories, guides and dispatches from Eshi Resorts, Bhimashankar - jungle walks, seasons in the Sahyadris, food and travel tips.",
 };
 
-// Revalidate on publish (tag) or hourly as a fallback.
-export const revalidate = 3600;
+// New posts appear within ~60s without needing the publish webhook.
+export const revalidate = 60;
 
 export default async function BlogPage() {
   const posts = await client.fetch<PostListItem[]>(
