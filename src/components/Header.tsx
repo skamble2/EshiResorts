@@ -95,10 +95,10 @@ export default function Header() {
       {/* Mobile menu */}
       <div
         className={`overflow-hidden bg-forest-950/98 backdrop-blur md:hidden transition-[max-height] duration-300 ${
-          open ? "max-h-96" : "max-h-0"
+          open ? "max-h-[85vh]" : "max-h-0"
         }`}
       >
-        <nav className="flex flex-col gap-1 px-6 py-4">
+        <nav className="flex max-h-[85vh] flex-col gap-1 overflow-y-auto px-6 pb-6 pt-4">
           {site.nav.map((item) => (
             <Link
               key={item.href}
