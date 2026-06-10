@@ -21,7 +21,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-sand-50">
           <p className="eyebrow text-gold-400">Taleghar · Bhimashankar</p>
           <h1 className="mt-5 font-serif text-4xl font-semibold leading-tight sm:text-6xl md:text-7xl">
-            Eshi Resorts - Bhimashankar.
+            Eshi Resorts - Bhimashankar
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-sand-100/90 sm:text-lg">
             Luxury in the heart of the Sahyadri jungle.
