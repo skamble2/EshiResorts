@@ -11,7 +11,7 @@ const slides = [
   { src: "/images/brochure/sunset.jpg", alt: "Golden sunset over the hills" },
   { src: "/images/brochure/forest-trail.jpg", alt: "Misty forest trail" },
   { src: "/images/brochure/restaurant.jpg", alt: "Eshi Resorts restaurant building amid the trees" },
-  { src: "/images/brochure/jungle-walk.jpg", alt: "Jungle walking trail under blue skies" },
+  { src: "/images/brochure/buddha-garden.jpg", alt: "Tranquil Buddha garden in the morning mist" },
 ];
 
 const INTERVAL = 5000;
