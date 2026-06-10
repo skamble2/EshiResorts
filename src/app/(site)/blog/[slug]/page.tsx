@@ -111,9 +111,7 @@ export default async function PostPage({
           >
             ← Back to all stories
           </Link>
-          <BookNowButton className="px-6 py-3 text-sm">
-            Reserve Your Stay
-          </BookNowButton>
+          <BookNowButton className="px-6 py-3 text-sm" />
         </div>
       </div>
     </article>

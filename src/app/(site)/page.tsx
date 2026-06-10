@@ -4,6 +4,8 @@ import Reveal from "@/components/Reveal";
 import RoomCard from "@/components/RoomCard";
 import BookNowButton from "@/components/BookNowButton";
 import HeroSlideshow from "@/components/HeroSlideshow";
+import WeatherBadge from "@/components/WeatherBadge";
+import WeekWeather from "@/components/WeekWeather";
 import { site, whatsappLink } from "@/content/site";
 import { rooms } from "@/content/rooms";
 import { stats, experiences, amenities, testimonials } from "@/content/home";
@@ -19,15 +21,15 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-sand-50">
           <p className="eyebrow text-gold-400">Taleghar · Bhimashankar</p>
           <h1 className="mt-5 font-serif text-4xl font-semibold leading-tight sm:text-6xl md:text-7xl">
-            Bhimashankar&apos;s Jungle Luxury Resort
+            Eshi Resorts - Bhimashankar.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-sand-100/90 sm:text-lg">
-            Where opulence meets the untouched splendour of nature. Wake to
-            mountain mist, dine over the valley, and lose yourself in the calm of
-            the Sahyadri jungle.
+            Luxury in the heart of the Sahyadri jungle.
           </p>
-          <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <BookNowButton className="px-8 py-3.5 text-base" />
+          <div className="mt-5">
+            <WeatherBadge />
+          </div>
+          <div className="mt-8 flex items-center justify-center">
             <Link
               href="/rooms"
               className="inline-flex items-center justify-center rounded-full border border-sand-50/40 px-8 py-3.5 text-sm font-semibold text-sand-50 backdrop-blur transition-colors hover:bg-sand-50/10"
@@ -57,6 +59,24 @@ export default function Home() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ---------------- Weather this week ---------------- */}
+      <section className="bg-sand-100 py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6 sm:px-8">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow">Plan Your Visit</p>
+            <h2 className="mt-4 font-serif text-3xl font-semibold text-forest-900 sm:text-4xl">
+              This week at the resort
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-stone-soft">
+              Live forecast for Bhimashankar, 900m up in the Sahyadris.
+            </p>
+          </Reveal>
+          <div className="mt-10">
+            <WeekWeather />
+          </div>
         </div>
       </section>
 
@@ -232,7 +252,7 @@ export default function Home() {
               Your jungle escape begins here
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-sand-100/90">
-              Reserve your stay at Eshi Resorts, or talk to us directly - we&apos;d
+              Book a stay at Eshi Resorts, or talk to us directly - we&apos;d
               love to help plan your getaway.
             </p>
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">

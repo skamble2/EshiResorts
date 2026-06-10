@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { type Room, inr, roomFacts, amenityMeta } from "@/content/rooms";
+import { type Room, roomFacts, amenityMeta } from "@/content/rooms";
 import BookNowButton from "./BookNowButton";
 
 export default function RoomCard({ room }: { room: Room }) {
@@ -52,14 +52,8 @@ export default function RoomCard({ room }: { room: Room }) {
           })}
         </ul>
 
-        <div className="mt-5 flex items-end justify-between">
-          <div>
-            <span className="font-serif text-2xl font-semibold text-forest-800">
-              {inr(room.price)}
-            </span>
-            <span className="text-xs text-stone-soft"> / night</span>
-          </div>
-          <BookNowButton className="px-5 py-2.5 text-xs">Book Now</BookNowButton>
+        <div className="mt-5">
+          <BookNowButton className="w-full py-2.5 text-xs">Book Now</BookNowButton>
         </div>
       </div>
     </article>

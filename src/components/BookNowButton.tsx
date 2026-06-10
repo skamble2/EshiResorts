@@ -21,7 +21,7 @@ export default function BookNowButton({ className = "", children }: Props) {
         className
       }
     >
-      {children ?? "Reserve Your Stay"}
+      {children ?? "Book a Stay"}
     </Link>
   );
 }

@@ -10,7 +10,7 @@ const slides = [
   { src: "/images/brochure/valley-mist.jpg", alt: "Mist over the Sahyadri hills" },
   { src: "/images/brochure/sunset.jpg", alt: "Golden sunset over the hills" },
   { src: "/images/brochure/forest-trail.jpg", alt: "Misty forest trail" },
-  { src: "/images/brochure/green-hills.jpg", alt: "Walkway over mist-covered green hills" },
+  { src: "/images/gallery/exterior-5.jpg", alt: "Eshi Resorts property exterior" },
   { src: "/images/brochure/jungle-walk.jpg", alt: "Jungle walking trail under blue skies" },
 ];
 

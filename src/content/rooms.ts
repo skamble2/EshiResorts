@@ -13,7 +13,6 @@ export type AmenityKey =
 export type Room = {
   slug: string;
   name: string;
-  price: number; // INR per night
   image: string;
   view: string;
   blurb: string;
@@ -46,7 +45,6 @@ export const rooms: Room[] = [
   {
     slug: "king-room-with-mountain-view",
     name: "King Room with Mountain View",
-    price: 8300,
     image: "/images/rooms/king-room-with-mountain-view.jpeg",
     view: "Mountain View",
     blurb:
@@ -56,7 +54,6 @@ export const rooms: Room[] = [
   {
     slug: "king-room-with-balcony",
     name: "King Room with Balcony",
-    price: 8000,
     image: "/images/rooms/king-room-with-balcony.jpeg",
     view: "Jungle View",
     blurb:
@@ -66,7 +63,6 @@ export const rooms: Room[] = [
   {
     slug: "deluxe-room-with-balcony",
     name: "Deluxe Room with Balcony",
-    price: 7800,
     image: "/images/rooms/deluxe-room-with-balcony.jpeg",
     view: "Balcony",
     blurb:
@@ -76,7 +72,6 @@ export const rooms: Room[] = [
   {
     slug: "superior-king-room",
     name: "Superior King Room",
-    price: 6500,
     image: "/images/rooms/superior-king-room.jpeg",
     view: "King Comfort",
     blurb:
@@ -86,7 +81,6 @@ export const rooms: Room[] = [
   {
     slug: "standard-double-room",
     name: "Standard Double Room",
-    price: 5500,
     image: "/images/rooms/standard-double-room.jpeg",
     view: "Cosy Retreat",
     blurb:
@@ -101,6 +95,3 @@ export const roomFacts = {
   bed: "King Bed",
   occupancy: "2 Guests + 1 (extra person chargeable)",
 };
-
-export const inr = (n: number) =>
-  `₹${n.toLocaleString("en-IN")}`;

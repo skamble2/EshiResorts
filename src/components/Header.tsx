@@ -36,13 +36,13 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-8">
         <Link href="/" aria-label="Eshi Resorts home" className="flex items-center">
           <Image
-            src={site.logo}
+            src="/images/home/logo.png"
             alt="Eshi Resorts"
-            width={808}
-            height={309}
+            width={203}
+            height={250}
             priority
             className={`w-auto brightness-0 invert transition-all duration-300 ${
-              transparent ? "h-12 sm:h-14" : "h-10 sm:h-12"
+              transparent ? "h-14 sm:h-16" : "h-11 sm:h-12"
             }`}
           />
         </Link>

@@ -30,7 +30,7 @@ export default function GalleryPage() {
             See it in person
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-stone-soft">
-            Photos only tell half the story. Reserve your stay and experience the
+            Photos only tell half the story. Book a stay and experience the
             wild for yourself.
           </p>
           <div className="mt-8">

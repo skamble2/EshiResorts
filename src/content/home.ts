@@ -1,6 +1,6 @@
 export const stats = [
   { value: "900m", label: "Above Sea Level" },
-  { value: "5", label: "Signature Stays" },
+  { value: "18", label: "Well-equipped Rooms" },
   { value: "510", label: "Sq Ft Rooms" },
   { value: "24/7", label: "Guest Support" },
 ];
