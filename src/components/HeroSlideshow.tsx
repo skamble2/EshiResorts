@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 // Nature backdrops that cross-fade behind the hero content.
 const slides = [
-  { src: "/images/gallery/exterior-4.jpg", alt: "Aerial view of Eshi Resorts in the Bhimashankar valley" },
+  { src: "/images/brochure/resort-mist.jpg", alt: "Eshi Resorts villa in the morning mist" },
   { src: "/images/brochure/valley-mist.jpg", alt: "Mist over the Sahyadri hills" },
   { src: "/images/brochure/sunset.jpg", alt: "Golden sunset over the hills" },
   { src: "/images/brochure/forest-trail.jpg", alt: "Misty forest trail" },
