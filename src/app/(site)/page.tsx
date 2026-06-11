@@ -22,7 +22,15 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-950/40 to-forest-950/80" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-sand-50">
-          <h1 className="font-serif text-5xl font-semibold leading-tight sm:text-6xl md:text-7xl">
+          <Image
+            src="/images/home/logo.png"
+            alt=""
+            width={203}
+            height={250}
+            priority
+            className="mx-auto h-24 w-auto brightness-0 invert sm:h-28"
+          />
+          <h1 className="mt-4 font-display text-4xl leading-tight sm:text-5xl md:text-6xl">
             Eshi Resorts
           </h1>
           <p className="mt-4 font-script text-xl text-gold-400 sm:text-2xl">

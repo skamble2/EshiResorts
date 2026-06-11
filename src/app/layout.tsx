@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Kalam } from "next/font/google";
+import { Inter, Playfair_Display, Kalam, Rye } from "next/font/google";
 import "./globals.css";
 import { site } from "@/content/site";
 
@@ -20,6 +20,14 @@ const kalam = Kalam({
   variable: "--font-kalam",
   subsets: ["latin"],
   weight: ["400", "700"],
+  display: "swap",
+});
+
+// Decorative Tuscan display face matching the logo's "ESHI RESORT'S" lettering.
+const rye = Rye({
+  variable: "--font-rye",
+  subsets: ["latin"],
+  weight: "400",
   display: "swap",
 });
 
@@ -53,7 +61,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} ${kalam.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${kalam.variable} ${rye.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-sand-50 text-ink">{children}</body>
     </html>
