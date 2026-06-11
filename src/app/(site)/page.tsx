@@ -6,6 +6,7 @@ import BookNowButton from "@/components/BookNowButton";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import WeatherBadge from "@/components/WeatherBadge";
 import WeekWeather from "@/components/WeekWeather";
+import MediaFab from "@/components/MediaFab";
 import { site, whatsappLink } from "@/content/site";
 import { rooms } from "@/content/rooms";
 import { stats, experiences, amenities, testimonials } from "@/content/home";
@@ -13,6 +14,8 @@ import { stats, experiences, amenities, testimonials } from "@/content/home";
 export default function Home() {
   return (
     <>
+      <MediaFab />
+
       {/* ---------------- Hero ---------------- */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
         <HeroSlideshow />
