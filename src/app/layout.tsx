@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Kalam } from "next/font/google";
 import "./globals.css";
 import { site } from "@/content/site";
 
@@ -12,6 +12,14 @@ const inter = Inter({
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
+  display: "swap",
+});
+
+// Handwritten script used for the brand tagline (matches the logo's lettering).
+const kalam = Kalam({
+  variable: "--font-kalam",
+  subsets: ["latin"],
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -45,7 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
+      className={`${inter.variable} ${playfair.variable} ${kalam.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-sand-50 text-ink">{children}</body>
     </html>

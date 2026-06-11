@@ -19,23 +19,17 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-950/40 to-forest-950/80" />
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-sand-50">
-          <p className="eyebrow text-gold-400">Taleghar · Bhimashankar</p>
-          <h1 className="mt-5 font-serif text-4xl font-semibold leading-tight sm:text-6xl md:text-7xl">
-            Eshi Resorts - Bhimashankar
+          <h1 className="font-serif text-5xl font-semibold leading-tight sm:text-6xl md:text-7xl">
+            Eshi Resorts
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-sand-100/90 sm:text-lg">
-            Luxury in the heart of the Sahyadri jungle.
+          <p className="mt-4 font-script text-xl text-gold-400 sm:text-2xl">
+            Bhimashankar&apos;s Jungle Luxury Resort
           </p>
-          <div className="mt-5">
+          <div className="mt-6">
             <WeatherBadge />
           </div>
           <div className="mt-8 flex items-center justify-center">
-            <Link
-              href="/rooms"
-              className="inline-flex items-center justify-center rounded-full border border-sand-50/40 px-8 py-3.5 text-sm font-semibold text-sand-50 backdrop-blur transition-colors hover:bg-sand-50/10"
-            >
-              View Our Rooms
-            </Link>
+            <BookNowButton className="px-8 py-3.5 text-base" />
           </div>
         </div>
 
