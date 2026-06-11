@@ -20,6 +20,26 @@ export default function GalleryPage() {
         image="/images/brochure/valley-mist.jpg"
       />
 
+      {/* Resort film - click to play, never autoplays */}
+      <section className="mx-auto max-w-5xl px-6 pt-16 sm:px-8 md:pt-20">
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <p className="eyebrow">Resort Film</p>
+          <h2 className="mt-4 font-serif text-3xl font-semibold text-forest-900 sm:text-4xl">
+            Eshi in motion
+          </h2>
+        </Reveal>
+        <Reveal className="mt-10">
+          <video
+            src="/videos/eshi-home.mp4"
+            controls
+            preload="metadata"
+            playsInline
+            poster="/images/slideshow/slide-1.jpg"
+            className="aspect-video w-full rounded-2xl bg-forest-950 object-cover shadow-lg ring-1 ring-sand-200"
+          />
+        </Reveal>
+      </section>
+
       <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 md:py-20">
         <GalleryGrid />
       </section>
