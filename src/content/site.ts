@@ -27,8 +27,10 @@ export const site = {
   mapsEmbedQuery:
     "Eshi Resorts and Restaurant, Bhimashankar - Manchar Rd, Ambegaon, Tale Ghar, Maharashtra 410509",
 
-  // Verified ratings (for the reviews page) - update as they grow
+  // Verified ratings (for the reviews page) - static fallbacks; the Google
+  // figure goes live automatically once GOOGLE_MAPS_API_KEY is set.
   ratings: {
+    google: { score: "4.6", count: 164 },
     booking: { score: "8.6", count: 123 },
     tripadvisor: { score: "5.0", count: 2 },
   },

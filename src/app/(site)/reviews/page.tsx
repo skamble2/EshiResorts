@@ -5,31 +5,47 @@ import BookNowButton from "@/components/BookNowButton";
 import { StarRow } from "@/components/icons";
 import { site } from "@/content/site";
 import { reviews } from "@/content/reviews";
+import { getGoogleReviews } from "@/lib/googleReviews";
 
 export const metadata: Metadata = {
   title: "Guest Reviews",
   description:
-    "Real stories from guests of Eshi Resorts, Bhimashankar. Rated 8.6 on Booking.com and #1 in the area on TripAdvisor.",
+    "Real stories from guests of Eshi Resorts, Bhimashankar. Rated 4.6 on Google and 8.6 on Booking.com.",
 };
 
-const summary = [
-  {
-    platform: "Booking.com",
-    score: site.ratings.booking.score,
-    scale: "/ 10",
-    count: `${site.ratings.booking.count} verified reviews`,
-    href: "https://www.booking.com/hotel/in/eshi-resorts-bhimashankars-jungle-luxury-resort.html",
-  },
-  {
-    platform: "TripAdvisor",
-    score: site.ratings.tripadvisor.score,
-    scale: "/ 5",
-    count: "#1 hotel in the area",
-    href: "https://www.tripadvisor.in/Hotel_Review-g28217009-d28163249-Reviews-Eshi_Resorts_And_Restaurant_Bhimashankars_Jungle_Luxury_Resort-Karkudi_Pune_Distric.html",
-  },
-];
+// Refresh periodically so live Google data stays current.
+export const revalidate = 21600;
 
-export default function ReviewsPage() {
+const GOOGLE_REVIEWS_URL =
+  "https://www.google.com/travel/search?q=eshi%20resort%20bhimashankar&ap=ugEHcmV2aWV3cw";
+
+export default async function ReviewsPage() {
+  const google = await getGoogleReviews();
+
+  const summary = [
+    {
+      platform: "Google",
+      score: google ? google.rating.toFixed(1) : site.ratings.google.score,
+      scale: "/ 5",
+      count: `${google ? google.count : site.ratings.google.count} reviews`,
+      href: GOOGLE_REVIEWS_URL,
+    },
+    {
+      platform: "Booking.com",
+      score: site.ratings.booking.score,
+      scale: "/ 10",
+      count: `${site.ratings.booking.count} verified reviews`,
+      href: "https://www.booking.com/hotel/in/eshi-resorts-bhimashankars-jungle-luxury-resort.html",
+    },
+    {
+      platform: "TripAdvisor",
+      score: site.ratings.tripadvisor.score,
+      scale: "/ 5",
+      count: "#1 hotel in the area",
+      href: "https://www.tripadvisor.in/Hotel_Review-g28217009-d28163249-Reviews-Eshi_Resorts_And_Restaurant_Bhimashankars_Jungle_Luxury_Resort-Karkudi_Pune_Distric.html",
+    },
+  ];
+
   return (
     <>
       <PageHero
@@ -41,7 +57,7 @@ export default function ReviewsPage() {
 
       {/* Rating summary */}
       <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 md:py-20">
-        <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-5xl gap-6 sm:grid-cols-3">
           {summary.map((s, i) => (
             <Reveal key={s.platform} delay={i * 0.1}>
               <div className="flex h-full flex-col items-center rounded-2xl bg-white p-8 text-center ring-1 ring-sand-200">
@@ -67,6 +83,35 @@ export default function ReviewsPage() {
           ))}
         </div>
       </section>
+
+      {/* Live Google reviews (renders when the Places API key is configured) */}
+      {google && google.reviews.length > 0 && (
+        <section className="mx-auto max-w-4xl px-6 pb-4 sm:px-8">
+          <Reveal className="text-center">
+            <p className="eyebrow">Latest on Google</p>
+          </Reveal>
+          <div className="mt-8 space-y-5">
+            {google.reviews.map((r, i) => (
+              <Reveal key={r.author + i} delay={(i % 3) * 0.08}>
+                <figure className="rounded-2xl bg-white p-7 ring-1 ring-sand-200">
+                  <div className="flex items-center justify-between">
+                    <StarRow />
+                    <span className="text-xs font-medium uppercase tracking-wider text-stone-soft">
+                      Google{r.when ? ` · ${r.when}` : ""}
+                    </span>
+                  </div>
+                  <blockquote className="mt-4 text-base leading-relaxed text-ink">
+                    “{r.text}”
+                  </blockquote>
+                  <figcaption className="mt-4 text-sm font-semibold text-forest-800">
+                    {r.author}
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Review list */}
       <section className="bg-sand-100 py-16 md:py-20">
