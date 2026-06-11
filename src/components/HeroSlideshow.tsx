@@ -4,14 +4,13 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 
-// Nature backdrops that cross-fade behind the hero content.
+// Owner-curated backdrops that cross-fade behind the hero content.
 const slides = [
-  { src: "/images/gallery/exterior-4.jpg", alt: "Aerial view of Eshi Resorts in the Bhimashankar valley" },
-  { src: "/images/brochure/valley-mist.jpg", alt: "Mist over the Sahyadri hills" },
-  { src: "/images/brochure/sunset.jpg", alt: "Golden sunset over the hills" },
-  { src: "/images/brochure/forest-trail.jpg", alt: "Misty forest trail" },
-  { src: "/images/brochure/restaurant.jpg", alt: "Eshi Resorts restaurant building amid the trees" },
-  { src: "/images/gallery/exterior-5.jpg", alt: "Cosy room interior at Eshi Resorts" },
+  { src: "/images/slideshow/slide-1.jpg", alt: "Canopy bed in a luxury room at Eshi Resorts" },
+  { src: "/images/slideshow/slide-2.jpg", alt: "Eshi Resorts villas amid the Sahyadri greenery" },
+  { src: "/images/slideshow/slide-3.jpg", alt: "Swimming pool at dusk with mushroom fountain" },
+  { src: "/images/slideshow/slide-4.jpg", alt: "Stone gazebo lit up at night" },
+  { src: "/images/slideshow/slide-5.jpg", alt: "Eshi Resorts villa in the morning mist" },
 ];
 
 const INTERVAL = 5000;
