@@ -10,6 +10,21 @@ export const metadata: Metadata = {
     "Eshi Resorts - a sanctuary of luxury and nature in Bhimashankar's pristine forests, near the sacred Jyotirlinga temple. Rooms, recreation, sunsets and jungle walks.",
 };
 
+const amenities = [
+  "Air Conditioning",
+  "Free WiFi",
+  "Multi-cuisine Restaurant",
+  "Jacuzzi Bathtubs",
+  "Personal Refrigerator",
+  "Tea & Coffee Maker",
+  "Complimentary Mineral Water",
+  "Premium Toiletry Kit",
+  "Plush Duvets & Towels",
+  "Secure Parking",
+  "Library & Indoor Games",
+  "Bicycles & Jungle Walks",
+];
+
 const recreation = [
   {
     title: "Carrom & Pool Table",
@@ -72,6 +87,47 @@ export default function AboutPage() {
               <Image
                 src="/images/brochure/resort-mist.jpg"
                 alt="Eshi Resorts villa in the morning mist"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Amenities */}
+      <section className="bg-forest-950 py-20 text-sand-50 md:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 sm:px-8 md:grid-cols-2 md:gap-16">
+          <Reveal>
+            <p className="eyebrow text-gold-400">What&apos;s Included</p>
+            <h2 className="mt-4 font-serif text-3xl font-semibold leading-snug sm:text-4xl">
+              Every comfort, in the heart of the wild
+            </h2>
+            <p className="mt-5 text-base leading-relaxed text-sand-100/85">
+              Thoughtful touches in every room and across the resort, so the
+              only thing you have to plan is how to unwind.
+            </p>
+            <ul className="mt-8 grid grid-cols-1 gap-x-6 gap-y-3 sm:grid-cols-2">
+              {amenities.map((a) => (
+                <li key={a} className="flex items-center gap-2.5 text-sm text-sand-100/90">
+                  <span className="text-gold-400" aria-hidden>
+                    <svg viewBox="0 0 20 20" className="h-4 w-4" fill="none">
+                      <path d="m4 10.5 4 4 8-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                  {a}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+
+          {/* Placeholder for an owner-provided amenities photo */}
+          <Reveal delay={0.15}>
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-forest-900 ring-1 ring-forest-700/40">
+              <Image
+                src="/images/brochure/buddha-garden.jpg"
+                alt="Amenities at Eshi Resorts"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"

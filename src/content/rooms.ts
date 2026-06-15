@@ -69,17 +69,6 @@ export const rooms: Room[] = [
     details: [premiumIntro, premiumComforts, inRoomTouches],
   },
   {
-    slug: "king-room-with-balcony",
-    name: "King Room with Balcony",
-    image: "/images/rooms/king-room-with-balcony.jpeg",
-    view: "Jungle View",
-    blurb:
-      "Step onto your private balcony and breathe in the jungle. A spacious king retreat with a bathtub and refrigerator for slow, luxurious mornings.",
-    amenities: [...base, "bathtub", "fridge", "jungle-view"],
-    gallery: ["/images/rooms/king-room-with-balcony.jpeg"],
-    details: [premiumIntro, premiumComforts, inRoomTouches],
-  },
-  {
     slug: "deluxe-room-with-balcony",
     name: "Deluxe Room with Balcony",
     image: "/images/rooms/deluxe-room-with-balcony.jpeg",

@@ -6,7 +6,6 @@ import BookNowButton from "@/components/BookNowButton";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import WeatherBadge from "@/components/WeatherBadge";
 import WeekWeather from "@/components/WeekWeather";
-import MediaFab from "@/components/MediaFab";
 import { site, whatsappLink } from "@/content/site";
 import { rooms } from "@/content/rooms";
 import { stats, experiences, amenities, testimonials } from "@/content/home";
@@ -14,25 +13,28 @@ import { stats, experiences, amenities, testimonials } from "@/content/home";
 export default function Home() {
   return (
     <>
-      <MediaFab />
-
       {/* ---------------- Hero ---------------- */}
       <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
         <HeroSlideshow />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-950/40 to-forest-950/80" />
 
-        <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-sand-50">
-          <h1 className="font-display text-4xl leading-tight sm:text-5xl md:text-6xl">
+        <div className="relative z-10 mx-auto max-w-5xl px-6 text-center text-sand-50">
+          <h1 className="font-display text-5xl leading-tight sm:text-7xl md:text-8xl">
             Eshi Resorts
           </h1>
-          <p className="mt-4 font-script text-xl text-gold-400 sm:text-2xl">
+          <p className="mt-5 font-script text-2xl text-gold-400 sm:text-3xl md:text-4xl">
             Bhimashankar&apos;s Jungle Luxury Resort
           </p>
-          <div className="mt-6">
+          <div className="mt-7">
             <WeatherBadge />
           </div>
           <div className="mt-8 flex items-center justify-center">
-            <BookNowButton className="px-8 py-3.5 text-base" />
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-full bg-gold-500 px-9 py-3.5 text-base font-semibold tracking-wide text-forest-950 transition-colors duration-300 hover:bg-gold-400"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
 
@@ -128,8 +130,8 @@ export default function Home() {
               Our Signature Rooms
             </h2>
             <p className="mt-4 text-base leading-relaxed text-stone-soft">
-              Five distinct retreats - each 510 sq ft, with a king bed and views
-              that change with the light.
+              Distinct retreats, each 510 sq ft with a king bed and views that
+              change with the light.
             </p>
           </Reveal>
 
@@ -161,21 +163,24 @@ export default function Home() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
           {experiences.map((exp, i) => (
-            <Reveal key={exp.title} delay={(i % 2) * 0.1}>
-              <article className="group relative h-72 overflow-hidden rounded-2xl">
-                <Image
-                  src={exp.image}
-                  alt={exp.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-forest-950/90 via-forest-950/30 to-transparent" />
-                <div className="absolute bottom-0 p-7 text-sand-50">
-                  <h3 className="font-serif text-2xl font-semibold">{exp.title}</h3>
-                  <p className="mt-2 max-w-md text-sm leading-relaxed text-sand-100/90">
+            <Reveal key={exp.title} delay={(i % 4) * 0.08}>
+              <article className="group flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-sand-200 transition-shadow duration-300 hover:shadow-xl">
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={exp.image}
+                    alt={exp.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 25vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-serif text-xl font-semibold text-forest-900">
+                    {exp.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-stone-soft">
                     {exp.body}
                   </p>
                 </div>

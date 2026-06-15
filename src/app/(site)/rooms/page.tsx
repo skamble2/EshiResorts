@@ -5,9 +5,9 @@ import PageHero from "@/components/PageHero";
 import { rooms } from "@/content/rooms";
 
 export const metadata: Metadata = {
-  title: "Rooms & Suites",
+  title: "Rooms in Harmony with Nature",
   description:
-    "Five luxurious 510 sq ft rooms with king beds, mountain and jungle views at Eshi Resorts, Bhimashankar.",
+    "Luxurious 510 sq ft rooms with king beds, mountain and jungle views at Eshi Resorts, Bhimashankar. Stay surrounded by serenity.",
 };
 
 export default function RoomsPage() {
@@ -15,8 +15,8 @@ export default function RoomsPage() {
     <>
       <PageHero
         eyebrow="Accommodation"
-        title="Rooms & Suites"
-        subtitle="Five distinct retreats - each 510 sq ft with a king bed, framed by mountain and jungle."
+        title="Rooms in Harmony with Nature"
+        subtitle="Stay surrounded by serenity - warm, earthy interiors and large windows that invite the misty Sahyadri valleys right in."
         image="/images/gallery/room-1.jpg"
       />
 
