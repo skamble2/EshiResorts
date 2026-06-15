@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       {/* ---------------- Hero ---------------- */}
-      <section className="relative flex min-h-screen items-center justify-center overflow-hidden">
+      <section className="relative flex min-h-[88vh] items-center justify-center overflow-hidden">
         <HeroSlideshow />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-950/40 to-forest-950/80" />
 
@@ -36,26 +36,28 @@ export default function Home() {
               Contact Us
             </Link>
           </div>
-
-          {/* Key facts, right on the first screen */}
-          <div className="mx-auto mt-10 flex max-w-2xl flex-wrap items-center justify-center gap-x-8 gap-y-4 sm:gap-x-12">
-            {stats.map((s) => (
-              <div key={s.label} className="text-center">
-                <p className="font-serif text-2xl font-semibold text-gold-400 sm:text-3xl">
-                  {s.value}
-                </p>
-                <p className="mt-0.5 text-[0.65rem] uppercase tracking-wider2 text-sand-100/80 sm:text-xs">
-                  {s.label}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce text-sand-50/70">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
             <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
+        </div>
+      </section>
+
+      {/* ---------------- Stats bar ---------------- */}
+      <section className="bg-forest-900 text-sand-50">
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-y-6 px-6 py-8 sm:px-8 md:grid-cols-4">
+          {stats.map((s) => (
+            <div key={s.label} className="text-center">
+              <p className="font-serif text-3xl font-semibold text-gold-400 sm:text-4xl">
+                {s.value}
+              </p>
+              <p className="mt-1 text-xs uppercase tracking-wider2 text-sand-200/70">
+                {s.label}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
