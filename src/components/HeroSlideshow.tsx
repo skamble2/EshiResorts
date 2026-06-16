@@ -6,11 +6,12 @@ import { AnimatePresence, motion } from "framer-motion";
 
 // Owner-curated backdrops that cross-fade behind the hero content.
 const slides = [
-  { src: "/images/slideshow/slide-1.jpg", alt: "Eshi Resorts villas amid the Sahyadri greenery" },
-  { src: "/images/slideshow/slide-2.jpg", alt: "Canopy bed in a luxury room at Eshi Resorts" },
-  { src: "/images/slideshow/slide-3.jpg", alt: "Swimming pool at dusk with mushroom fountain" },
-  { src: "/images/slideshow/slide-4.jpg", alt: "Eshi Resorts villa in the morning mist" },
-  { src: "/images/slideshow/slide-5.jpg", alt: "Stone gazebo lit up at night" },
+  { src: "/images/slideshow/slide-1.jpg", alt: "Sahyadri valley and pool view from Eshi Resorts at sunset" },
+  { src: "/images/slideshow/slide-2.jpg", alt: "Canopy-bed luxury room at Eshi Resorts" },
+  { src: "/images/slideshow/slide-3.jpg", alt: "Stone gazebo lit up at night" },
+  { src: "/images/slideshow/slide-4.jpg", alt: "Rolling Sahyadri hills above the resort" },
+  { src: "/images/slideshow/slide-5.jpg", alt: "Premium room with canopy bed and private jacuzzi" },
+  { src: "/images/slideshow/slide-6.jpg", alt: "Dusk over the resort villas in the valley" },
 ];
 
 const INTERVAL = 5000;

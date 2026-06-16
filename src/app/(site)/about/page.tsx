@@ -17,26 +17,32 @@ const recreation: Recreation[] = [
   {
     title: "Carrom & Pool Table",
     body: "Engage in timeless fun with a classic carrom board or enjoy a lively match on our expertly maintained pool table - perfect for friendly competitions that bring laughter and camaraderie.",
+    image: "/images/recreation/pool-table.jpg",
   },
   {
     title: "Chess",
     body: "For those drawn to strategic challenges, our elegant chess sets offer the perfect retreat to immerse yourself in thoughtful play, within the soothing sounds of the surrounding forest.",
+    image: "/images/recreation/chess.jpg",
   },
   {
     title: "Karaoke Evenings",
     body: "Unleash your inner star during spirited evenings with karaoke sessions - guests gather to sing their favourite songs under the canopy of stars, creating joyful moments filled with music and laughter.",
+    image: "/images/recreation/karaoke.jpg",
   },
   {
     title: "The Library",
     body: "Lose yourself in a carefully curated library - a cosy haven of books spanning genres from gripping novels and travelogues to spiritual texts. Find a quiet nook and let the words transport you.",
+    image: "/images/recreation/library.jpg",
   },
   {
     title: "Trampoline & Swings",
     body: "For guests young and young at heart, the trampoline and swings provide joyful freedom beneath the canopy, where laughter dances on the breeze and every leap celebrates lighthearted fun.",
+    image: "/images/recreation/trampoline.jpg",
   },
   {
     title: "Bicycle Rides",
     body: "Explore the enchanting surroundings on our bicycles, designed for tranquil rides through winding forest trails and charming nearby villages - the Sahyadri landscape at a pace that lets you connect with its soul.",
+    image: "/images/recreation/bicycle.jpg",
   },
 ];
 
