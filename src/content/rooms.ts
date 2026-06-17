@@ -60,7 +60,7 @@ export const rooms: Room[] = [
   {
     slug: "king-room-with-mountain-view",
     name: "King Room with Mountain View",
-    image: "/images/rooms/king-room-with-mountain-view/1.jpg",
+    image: "/images/rooms/king-room-with-mountain-view/4.jpg",
     view: "Mountain View",
     blurb:
       "Wake to sweeping Sahyadri ridgelines from our most coveted room - a king bed, a deep bathtub and uninterrupted valley vistas.",
