@@ -1,5 +1,6 @@
 export type GalleryCategory =
   | "Rooms"
+  | "Swimming Pool"
   | "Nature"
   | "Exterior"
   | "Garden"
@@ -14,6 +15,7 @@ export type GalleryImage = {
 // Category order for the filter bar ("All" is added in the UI).
 export const galleryCategories: GalleryCategory[] = [
   "Rooms",
+  "Swimming Pool",
   "Nature",
   "Exterior",
   "Garden",
@@ -22,6 +24,9 @@ export const galleryCategories: GalleryCategory[] = [
 
 // A curated mix of the resort's photography and brochure nature shots.
 export const gallery: GalleryImage[] = [
+  { src: "/images/pool/pool-1.jpg", alt: "Infinity pool with mushroom fountain at dusk", category: "Swimming Pool" },
+  { src: "/images/pool/pool-2.jpg", alt: "Pool overlooking the Sahyadri valley at sunset", category: "Swimming Pool" },
+  { src: "/images/pool/pool-3.jpg", alt: "Poolside gazebo with valley views", category: "Swimming Pool" },
   { src: "/images/gallery/exterior-4.jpg", alt: "Aerial view of the resort villas in the valley", category: "Exterior" },
   { src: "/images/brochure/valley-mist.jpg", alt: "Mist over the Sahyadri hills", category: "Nature" },
   { src: "/images/gallery/room-2.jpg", alt: "Luxury room with private jacuzzi and valley view", category: "Rooms" },

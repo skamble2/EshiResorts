@@ -14,7 +14,7 @@ import {
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Reach Eshi Resorts, Bhimashankar. Call, WhatsApp or send an enquiry. Rajgurunagar, Bhimashankar - Manchar Rd, Ambegaon, Tale Ghar, Maharashtra 410509.",
+    "Reach Eshi Resorts, Bhimashankar. Call, WhatsApp or send an enquiry. Rajgurunagar - Bhimashankar Road, A/P Taleghar, Tal Ambegaon, Dist Pune 410509.",
 };
 
 const channels = [
@@ -29,7 +29,7 @@ const channels = [
     Icon: WhatsAppIcon,
     label: "WhatsApp",
     value: "Message us instantly",
-    href: whatsappLink("Hi Eshi Resorts! I'd like to enquire about a stay."),
+    href: whatsappLink("Hi"),
     sub: "Usually replies within the hour",
   },
   {

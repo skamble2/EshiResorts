@@ -7,13 +7,18 @@ export default function Footer() {
     <footer className="bg-forest-950 text-sand-100">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 sm:px-8 md:grid-cols-4">
         <div className="md:col-span-2">
-          <Image
-            src={site.logo}
-            alt="Eshi Resorts"
-            width={808}
-            height={309}
-            className="h-14 w-auto brightness-0 invert"
-          />
+          <div className="flex items-center gap-3">
+            <Image
+              src="/images/home/logo.png"
+              alt="Eshi Resorts"
+              width={203}
+              height={250}
+              className="h-12 w-auto brightness-0 invert"
+            />
+            <span className="font-serif text-2xl font-semibold text-sand-50">
+              Eshi Resorts
+            </span>
+          </div>
           <p className="mt-4 text-xs uppercase tracking-[0.25em] text-gold-400">
             {site.tagline}
           </p>
@@ -59,7 +64,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href={whatsappLink("Hi Eshi Resorts, I'd like to know more.")}
+                href={whatsappLink("Hi")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gold-400"

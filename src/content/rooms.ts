@@ -65,7 +65,7 @@ export const rooms: Room[] = [
     blurb:
       "Wake to sweeping Sahyadri ridgelines from our most coveted room - a king bed, a deep bathtub and uninterrupted valley vistas.",
     amenities: [...base, "bathtub", "fridge", "mountain-view"],
-    gallery: galleryOf("king-room-with-mountain-view", 9),
+    gallery: galleryOf("king-room-with-mountain-view", 8),
     details: [premiumIntro, premiumComforts, inRoomTouches],
   },
   {

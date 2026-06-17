@@ -12,11 +12,11 @@ export const site = {
   email: "admin@eshiresorts.com",
 
   address: {
-    line: "Rajgurunagar, Bhimashankar - Manchar Rd, Ambegaon, Tale Ghar",
+    line: "Rajgurunagar - Bhimashankar Road, A/P - Taleghar, Tal - Ambegaon",
     city: "Pune",
     state: "Maharashtra",
     pin: "410509",
-    full: "Eshi Resorts and Restaurant, Rajgurunagar, Bhimashankar - Manchar Rd, Ambegaon, Tale Ghar, Maharashtra 410509",
+    full: "Eshi Resorts, Rajgurunagar - Bhimashankar Road, A/P - Taleghar, Tal - Ambegaon, Dist - Pune 410509",
   },
 
   // Booking handoff - Aiosell backend (no API for now, just deep-link)
@@ -25,7 +25,7 @@ export const site = {
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Eshi+Resorts+and+Restaurant+Bhimashankar+Manchar+Road+Ambegaon+Tale+Ghar",
   mapsEmbedQuery:
-    "Eshi Resorts and Restaurant, Bhimashankar - Manchar Rd, Ambegaon, Tale Ghar, Maharashtra 410509",
+    "Eshi Resorts, Rajgurunagar - Bhimashankar Road, Taleghar, Ambegaon, Pune 410509",
 
   // Verified ratings (for the reviews page) - static fallbacks; the Google
   // figure goes live automatically once GOOGLE_MAPS_API_KEY is set.

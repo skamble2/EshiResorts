@@ -6,6 +6,7 @@ import BookNowButton from "@/components/BookNowButton";
 import HeroSlideshow from "@/components/HeroSlideshow";
 import WeatherBadge from "@/components/WeatherBadge";
 import WeekWeather from "@/components/WeekWeather";
+import Faq from "@/components/Faq";
 import { site, whatsappLink } from "@/content/site";
 import { rooms } from "@/content/rooms";
 import { stats, experiences, amenities, testimonials } from "@/content/home";
@@ -239,6 +240,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------------- FAQ ---------------- */}
+      <section className="bg-sand-100 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow">Good to Know</p>
+            <h2 className="mt-4 font-serif text-3xl font-semibold text-forest-900 sm:text-4xl">
+              Frequently asked questions
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-stone-soft">
+              Everything you need to plan a smooth, restful stay at Eshi Resorts.
+            </p>
+          </Reveal>
+          <div className="mt-12">
+            <Faq />
+          </div>
+        </div>
+      </section>
+
       {/* ---------------- Final CTA ---------------- */}
       <section className="relative overflow-hidden">
         <Image
@@ -260,7 +279,7 @@ export default function Home() {
             <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <BookNowButton className="px-8 py-3.5 text-base" />
               <a
-                href={whatsappLink("Hi Eshi Resorts! I'd like to plan a stay.")}
+                href={whatsappLink("Hi")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-sand-50/40 px-8 py-3.5 text-sm font-semibold text-sand-50 transition-colors hover:bg-sand-50/10"
