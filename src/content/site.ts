@@ -8,6 +8,8 @@ export const site = {
 
   phone: "+91 9309314374",
   phoneRaw: "+919309314374",
+  phone2: "+91 9270314374",
+  phone2Raw: "+919270314374",
   whatsapp: "919270314374",
   email: "admin@eshiresorts.com",
 

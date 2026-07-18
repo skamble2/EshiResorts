@@ -17,14 +17,12 @@ export const metadata: Metadata = {
     "Reach Eshi Resorts, Bhimashankar. Call, WhatsApp or send an enquiry. Rajgurunagar - Bhimashankar Road, A/P Taleghar, Tal Ambegaon, Dist Pune 410509.",
 };
 
+const callNumbers = [
+  { value: site.phone, href: `tel:${site.phoneRaw}` },
+  { value: site.phone2, href: `tel:${site.phone2Raw}` },
+];
+
 const channels = [
-  {
-    Icon: PhoneIcon,
-    label: "Call Us",
-    value: site.phone,
-    href: `tel:${site.phoneRaw}`,
-    sub: "Available 9 AM - 6 PM, every day",
-  },
   {
     Icon: WhatsAppIcon,
     label: "WhatsApp",
@@ -76,8 +74,34 @@ export default function ContactPage() {
         </Reveal>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {/* Call Us - two tappable numbers */}
+          <Reveal>
+            <div className="flex h-full flex-col items-center rounded-2xl bg-white p-8 text-center ring-1 ring-sand-200">
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-forest-800 text-gold-400">
+                <PhoneIcon className="h-7 w-7" />
+              </span>
+              <h3 className="mt-5 font-serif text-xl font-semibold text-forest-900">
+                Call Us
+              </h3>
+              <div className="mt-1 space-y-0.5">
+                {callNumbers.map((n) => (
+                  <a
+                    key={n.href}
+                    href={n.href}
+                    className="block text-sm font-medium text-forest-700 transition-colors hover:text-gold-600"
+                  >
+                    {n.value}
+                  </a>
+                ))}
+              </div>
+              <p className="mt-2 text-xs text-stone-soft">
+                Available 9 AM - 6 PM, every day
+              </p>
+            </div>
+          </Reveal>
+
           {channels.map(({ Icon, label, value, href, sub }, i) => (
-            <Reveal key={label} delay={i * 0.1}>
+            <Reveal key={label} delay={(i + 1) * 0.1}>
               <a
                 href={href}
                 target={href.startsWith("http") ? "_blank" : undefined}

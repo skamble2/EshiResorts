@@ -63,6 +63,11 @@ export default function Footer() {
               </a>
             </li>
             <li>
+              <a href={`tel:${site.phone2Raw}`} className="hover:text-gold-400">
+                {site.phone2}
+              </a>
+            </li>
+            <li>
               <a
                 href={whatsappLink("Hi")}
                 target="_blank"
