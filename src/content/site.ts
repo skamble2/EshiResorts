@@ -19,8 +19,8 @@ export const site = {
     full: "Eshi Resorts, Rajgurunagar - Bhimashankar Road, A/P - Taleghar, Tal - Ambegaon, Dist - Pune 410509",
   },
 
-  // Booking handoff - Aiosell backend (no API for now, just deep-link)
-  bookingUrl: "https://be.aiosell.com/book/b507a08c7d",
+  // Booking handoff - AxisRooms booking engine (deep-link)
+  bookingUrl: "https://app.axisrooms.com/beV2/home1.html?bookingEngineId=5021",
 
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=Eshi+Resorts+and+Restaurant+Bhimashankar+Manchar+Road+Ambegaon+Tale+Ghar",
