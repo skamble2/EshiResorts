@@ -131,12 +131,12 @@ export default function Home() {
               Our Signature Rooms
             </h2>
             <p className="mt-4 text-base leading-relaxed text-stone-soft">
-              Distinct retreats, each 510 sq ft with a king bed and views that
-              change with the light.
+              Distinct retreats from 300 to 650 sq ft - king and canopy beds,
+              and views that change with the light.
             </p>
           </Reveal>
 
-          <div className="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid auto-rows-fr gap-7 sm:grid-cols-2 lg:grid-cols-3">
             {rooms.slice(0, 3).map((room, i) => (
               <Reveal key={room.slug} delay={i * 0.1}>
                 <RoomCard room={room} />

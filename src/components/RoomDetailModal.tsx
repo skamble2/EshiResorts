@@ -127,7 +127,7 @@ export default function RoomDetailModal({ room, onClose }: Props) {
               {room.name}
             </h3>
             <p className="mt-2 text-xs uppercase tracking-wider text-stone-soft sm:text-sm">
-              {roomFacts.size} · {roomFacts.bed} · {roomFacts.occupancy}
+              {room.size} · {room.bed} · {roomFacts.occupancy}
             </p>
 
             <div className="mt-6 space-y-5">

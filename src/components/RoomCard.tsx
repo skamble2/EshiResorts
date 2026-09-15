@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { AnimatePresence } from "framer-motion";
-import { type Room, roomFacts, amenityMeta } from "@/content/rooms";
+import { type Room, amenityMeta } from "@/content/rooms";
 import BookNowButton from "./BookNowButton";
 import RoomDetailModal from "./RoomDetailModal";
 
@@ -23,7 +23,7 @@ export default function RoomCard({ room }: { room: Room }) {
             setOpen(true);
           }
         }}
-        className="group flex cursor-pointer flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-sand-200 transition-shadow duration-300 hover:shadow-xl"
+        className="group flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-sand-200 transition-shadow duration-300 hover:shadow-xl"
       >
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
@@ -52,7 +52,7 @@ export default function RoomCard({ room }: { room: Room }) {
             {room.name}
           </h3>
           <p className="mt-1 text-xs uppercase tracking-wider text-stone-soft">
-            {roomFacts.size} · {roomFacts.bed} · Sleeps 2+1
+            {room.size} · {room.bed} · Sleeps 2+1
           </p>
           <p className="mt-3 flex-1 text-sm leading-relaxed text-stone-soft">
             {room.blurb}

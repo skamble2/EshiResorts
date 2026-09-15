@@ -7,14 +7,15 @@ export type AmenityKey =
   | "bathtub"
   | "fridge"
   | "mountain-view"
-  | "jungle-view"
-  | "safety";
+  | "jungle-view";
 
 export type Room = {
   slug: string;
   name: string;
   image: string;
   view: string;
+  size: string;
+  bed: string;
   blurb: string;
   amenities: AmenityKey[];
   gallery: string[]; // slideshow images for the detail view
@@ -25,14 +26,8 @@ const galleryOf = (slug: string, count: number) =>
   Array.from({ length: count }, (_, i) => `/images/rooms/${slug}/${i + 1}.jpg`);
 
 // Shared brochure copy
-const premiumIntro =
-  "Elevate your stay to a realm where luxury whispers to the wilderness. Our Premium Rooms, gracefully perched on the second floor, offer not just a room but a sanctuary of serenity - where every morning dawns with panoramic vistas of mist-kissed valleys and rolling Sahyadri hills.";
-const premiumComforts =
-  "Romantic and regal canopy beds add charm and comfort, while a luxurious Jacuzzi bathtub is perfect for soaking away stress. Air conditioning ensures year-round comfort, alongside a personal refrigerator to keep refreshments chilled, a tea and coffee maker, and comfortable in-room slippers.";
 const inRoomTouches =
   "Guests enjoy complimentary mineral water throughout their stay, soft high-quality towels, export-quality bedsheets and plush duvets, and an amenity kit with dental and shaving essentials, shampoo, conditioner, nourishing body lotion and refreshing bath soap.";
-const tranquilRetreat =
-  "Every room at Eshi is a tranquil retreat designed to harmonise luxury with nature. From the moment you step inside, you will find warm, earthy interiors, large windows that invite the outdoors in, and the soothing silence of the forest all around.";
 
 // Maps each amenity to its icon (from the resort's own icon set) and label.
 export const amenityMeta: Record<AmenityKey, { icon: string; label: string }> = {
@@ -41,75 +36,146 @@ export const amenityMeta: Record<AmenityKey, { icon: string; label: string }> = 
   television: { icon: "/images/amenities/television.svg", label: "Television" },
   parking: { icon: "/images/amenities/parking.svg", label: "Secure Parking" },
   dining: { icon: "/images/amenities/dining.svg", label: "Multi-cuisine Dining" },
-  bathtub: { icon: "/images/amenities/bathtub.svg", label: "Bathtub" },
-  fridge: { icon: "/images/amenities/fridge.png", label: "Refrigerator" },
+  bathtub: { icon: "/images/amenities/bathtub.svg", label: "Jacuzzi Bathtub" },
+  fridge: { icon: "/images/amenities/fridge.png", label: "Mini Fridge" },
   "mountain-view": {
     icon: "/images/amenities/mountain-view.svg",
-    label: "Mountain View",
+    label: "Valley & Mountain View",
   },
   "jungle-view": {
     icon: "/images/amenities/jungle-view.png",
     label: "Jungle View",
   },
-  safety: { icon: "/images/amenities/safety.svg", label: "Privacy & Safety" },
 };
 
-const base: AmenityKey[] = ["ac", "wifi", "television", "parking", "dining"];
+const base: AmenityKey[] = ["ac", "wifi", "television", "parking", "dining", "fridge"];
 
 export const rooms: Room[] = [
   {
-    slug: "king-room-with-mountain-view",
-    name: "King Room with Mountain View",
-    image: "/images/rooms/king-room-with-mountain-view/3.jpg",
-    view: "Mountain View",
+    slug: "sahyadri-horizon-premium-king-room",
+    name: "Sahyadri Horizon Premium King Room",
+    image: "/images/rooms/sahyadri-horizon-premium-king-room/15.jpg",
+    view: "Valley & Mountain View",
+    size: "510 sq ft",
+    bed: "Canopy King Bed",
     blurb:
-      "Wake to sweeping Sahyadri ridgelines from our most coveted room - a king bed, a deep bathtub and uninterrupted valley vistas.",
-    amenities: [...base, "bathtub", "fridge", "mountain-view"],
-    gallery: galleryOf("king-room-with-mountain-view", 8),
-    details: [premiumIntro, premiumComforts, inRoomTouches],
-  },
-  {
-    slug: "deluxe-room-with-balcony",
-    name: "Deluxe Room with Balcony",
-    image: "/images/rooms/deluxe-room-with-balcony.jpeg",
-    view: "Balcony",
-    blurb:
-      "A refined deluxe room opening to a private balcony - generous space, soft light and the calm of the surrounding forest.",
-    amenities: [...base, "safety"],
-    gallery: galleryOf("deluxe-room-with-balcony", 6),
+      "Our signature retreat on the second floor - a canopy king bed, a private jacuzzi bathtub and breathtaking valley views that unfold like a living painting.",
+    amenities: [...base, "bathtub", "mountain-view"],
+    gallery: galleryOf("sahyadri-horizon-premium-king-room", 23),
     details: [
-      tranquilRetreat,
-      "Step onto your private balcony and let the jungle in - the perfect spot for a slow morning tea as mist rolls over the treetops, or a quiet evening listening to the forest settle.",
+      "Sahyadri Horizon Premium King Room is our signature retreat, perched on the second floor, just 18/20 steps away. Wake up to breathtaking valley and mountain views that unfold like a living painting. An elegant king-size canopy bed adds a touch of grandeur, while the private bathtub with Jacuzzi invites you to unwind. Complete with AC, mini fridge, mineral water bottles and Smart TV, this premium room is where nature meets indulgence.",
       inRoomTouches,
     ],
   },
   {
-    slug: "superior-king-room",
-    name: "Superior King Room",
-    image: "/images/rooms/superior-king-room.jpeg",
-    view: "King Comfort",
+    slug: "shekaru-mountain-view-king-room",
+    name: "Shekaru Mountain View King Room",
+    image: "/images/rooms/shekaru-mountain-view-king-room/2.jpg",
+    view: "Valley & Mountain View",
+    size: "510 sq ft",
+    bed: "Canopy King Bed",
     blurb:
-      "Understated comfort with a plush king bed and all the essentials - an easy, elegant base for your Bhimashankar escape.",
-    amenities: [...base, "safety"],
-    gallery: galleryOf("superior-king-room", 2),
+      "Ground-floor grandeur - panoramic valley views from a king size canopy bed, a spacious balcony and a luxurious jacuzzi bathtub.",
+    amenities: [...base, "bathtub", "mountain-view"],
+    gallery: galleryOf("shekaru-mountain-view-king-room", 24),
     details: [
-      tranquilRetreat,
-      "Thoughtfully curated to suit every kind of traveller - from romantic getaways to family vacations and solo escapes - the Superior King pairs a plush king bed with all the essentials for an effortless stay.",
+      "Set on the ground floor, Shekaru Mountain View King Room is our signature premium retreat, where the valley unfolds before you and majestic mountains create a breathtaking backdrop. Wake up to panoramic views from an elegant king size canopy bed and step onto the spacious balcony to soak in nature's beauty. Unwind in the luxurious jacuzzi bathtub and enjoy AC, mini fridge, mineral water and Smart TV - where refined comfort meets the grandeur of the mountains.",
       inRoomTouches,
     ],
   },
   {
-    slug: "standard-double-room",
-    name: "Standard Double Room",
-    image: "/images/rooms/standard-double-room.jpeg",
-    view: "Cosy Retreat",
+    slug: "girikunj-deluxe-room",
+    name: "Girikunj Deluxe Room",
+    image: "/images/rooms/girikunj-deluxe-room/5.jpg",
+    view: "Valley & Mountain View",
+    size: "650 sq ft",
+    bed: "Canopy King Bed",
     blurb:
-      "Our most accessible room without compromise - comfortable, private and perfectly placed for exploring the valley.",
-    amenities: ["wifi", "television", "parking", "dining", "safety"],
-    gallery: galleryOf("standard-double-room", 4),
+      "650 sq ft where nature becomes your room - floor-to-ceiling glass on all four sides beneath a graceful tensile-fabric roof.",
+    amenities: [...base, "mountain-view"],
+    gallery: galleryOf("girikunj-deluxe-room", 16),
     details: [
-      tranquilRetreat,
-      "Our most accessible room without compromise - comfortable, private and perfectly placed as a base for the temple, the jungle trails and everything Bhimashankar has to offer.",
+      "Girikunj is a luxurious 650 sq. ft. retreat where nature becomes your room. Beneath a graceful tensile-fabric roof, floor-to-ceiling glass on all four sides frames sweeping mountain and valley views, draped with curtains like an elegant shamiyana. A canopy king bed, private balcony, spacious bathroom, AC, Smart TV, mini fridge, open wardrobe, kettle, mineral water and hot & cold water complete this enchanting escape. Reached by 10/12 steps.",
+      inRoomTouches,
+    ],
+  },
+  {
+    slug: "prakruti-family-room",
+    name: "Prakruti Family Room",
+    image: "/images/rooms/prakruti-family-room/3.jpg",
+    view: "Jungle View",
+    size: "600 sq ft",
+    bed: "Canopy King Bed",
+    blurb:
+      "A spacious ground-floor retreat with an elegant canopy bed and a private balcony opening straight onto the green.",
+    amenities: [...base, "jungle-view"],
+    gallery: galleryOf("prakruti-family-room", 12),
+    details: [
+      "Prakruti is a spacious ground-floor retreat surrounded by lush greenery, designed for a serene and regal stay. Featuring an elegant canopy bed for a royal touch, the room opens onto a private balcony overlooking nature. Enjoy a spacious bathroom with hot & cold water, AC, mineral water bottles, kettle with tea & coffee facilities, open-style wardrobe, mini fridge, Wi-Fi and Smart TV - blending comfort, charm and nature beautifully.",
+      inRoomTouches,
+    ],
+  },
+  {
+    slug: "shivneri-deluxe-room",
+    name: "Shivneri Deluxe Room",
+    image: "/images/rooms/shivneri-deluxe-room/3.jpg",
+    view: "Valley & Mountain View",
+    size: "510 sq ft",
+    bed: "King Bed",
+    blurb:
+      "A first-floor retreat just 5-6 steps up - a king size bed and a large balcony with a swing, set against valley and mountain views.",
+    amenities: [...base, "mountain-view"],
+    gallery: galleryOf("shivneri-deluxe-room", 16),
+    details: [
+      "Shivneri is a charming first-floor retreat, accessible by just 5/6 steps, nestled amidst lush greenery with breathtaking valley and mountain views. Featuring a spacious king-size bed and a large balcony with a swing and comfortable chairs, it offers the perfect setting to unwind in nature. The room includes AC, hot & cold water, mini fridge, mineral water bottles, kettle with tea & coffee, Wi-Fi, TV and an open-style wardrobe.",
+      inRoomTouches,
+    ],
+  },
+  {
+    slug: "aranyam-deluxe-room",
+    name: "Aranyam Deluxe Room",
+    image: "/images/rooms/aranyam-deluxe-room/9.jpg",
+    view: "Jungle View",
+    size: "510 sq ft",
+    bed: "Canopy King Bed",
+    blurb:
+      "Where the jungle whispers at your doorstep - a regal canopy bed on the ground floor, embraced by swaying trees.",
+    amenities: [...base, "jungle-view"],
+    gallery: galleryOf("aranyam-deluxe-room", 10),
+    details: [
+      "Step into Aranyam Deluxe Room, where the jungle whispers at your doorstep. Nestled on the ground floor, embraced by swaying trees, it feels like a royal retreat deep within the wild. Rest beneath a regal canopy bed, breathe in the green, and unwind on your private balcony. With cool AC, a kettle, and refreshing water bottles, every comfort meets the charm of a timeless forest stay.",
+      inRoomTouches,
+    ],
+  },
+  {
+    slug: "vanvaibhav-standard-room",
+    name: "Vanvaibhav Standard Room",
+    image: "/images/rooms/vanvaibhav-standard-room/4.jpg",
+    view: "Jungle View",
+    size: "510 sq ft",
+    bed: "King Bed",
+    blurb:
+      "A spacious ground-floor retreat with a luxurious king size bed and a private balcony overlooking the forest.",
+    amenities: [...base, "jungle-view"],
+    gallery: galleryOf("vanvaibhav-standard-room", 12),
+    details: [
+      "Vanvaibhav is a spacious ground-floor retreat nestled amidst lush greenery, offering a serene escape with a touch of regal charm. Featuring a luxurious king-size bed and a private balcony overlooking nature, the room is designed for comfort and relaxation. It includes AC, a spacious bathroom with hot & cold water, mineral water bottles, kettle with tea & coffee facilities, open-style wardrobe, mini fridge, Wi-Fi and Smart TV - perfectly blending modern comforts with the beauty of nature.",
+      inRoomTouches,
+    ],
+  },
+  {
+    slug: "shantivan-forest-room",
+    name: "Shantivan Forest Room",
+    image: "/images/rooms/shantivan-forest-room/12.jpg",
+    view: "Jungle View",
+    size: "300 sq ft",
+    bed: "King Bed",
+    blurb:
+      "A cosy ground-floor room under a distinctive tensile fabric roof, nestled amid lush trees for a true jungle-retreat stay.",
+    amenities: [...base, "jungle-view"],
+    gallery: galleryOf("shantivan-forest-room", 17),
+    details: [
+      "Shantivan is a cozy ground-floor room nestled amidst lush trees, offering a unique jungle-retreat experience. The room features a distinctive tensile fabric roof and is equipped with AC (hot & cold), hot and cold water, mini fridge, complimentary water bottles, kettle with tea & coffee facilities, Wi-Fi, TV and an open-style wardrobe. Ideal for guests seeking a peaceful stay surrounded by nature with modern comforts.",
       inRoomTouches,
     ],
   },
@@ -117,7 +183,5 @@ export const rooms: Room[] = [
 
 // Shared room facts (all rooms)
 export const roomFacts = {
-  size: "510 sq ft",
-  bed: "King Bed",
   occupancy: "2 Guests + 1 (extra person chargeable)",
 };
