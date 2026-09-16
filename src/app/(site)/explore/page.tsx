@@ -17,7 +17,7 @@ export default function ExplorePage() {
     <>
       <PageHero
         eyebrow="Explore"
-        title="Places to visit nearby"
+        title="Nearby places to visit"
         subtitle="A Jyotirlinga, a wildlife sanctuary, forts, caves and cloud-covered viewpoints - all within reach of the resort."
         image="/images/brochure/green-hills.jpg"
       />
