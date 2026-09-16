@@ -23,7 +23,7 @@ export default function Home() {
           <h1 className="font-display text-[2.25rem] leading-tight sm:text-[3.375rem] md:text-[4.5rem]">
             Eshi Resorts
           </h1>
-          <p className="mt-6 font-serif text-sm uppercase tracking-wider2 text-gold-400 sm:text-base md:text-lg">
+          <p className="mt-3 font-serif text-2xl italic text-gold-400 sm:text-3xl md:text-4xl">
             Bhimashankar&apos;s Jungle Luxury Resort
           </p>
           <div className="mt-7">
