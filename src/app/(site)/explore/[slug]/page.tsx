@@ -46,14 +46,14 @@ export default async function PlacePage({
 
   return (
     <>
-      {/* Heading on colour, matching every other page */}
-      <section className="flex min-h-[260px] items-center justify-center bg-forest-950 px-6 pb-16 pt-32 sm:min-h-[300px] sm:pb-20 sm:pt-36">
-        <div className="mx-auto max-w-3xl text-center text-sand-50">
-          <p className="eyebrow text-gold-400">{place.category}</p>
+      {/* Heading on white, matching every other page */}
+      <section className="flex min-h-[260px] items-center justify-center bg-white px-6 pb-16 pt-32 sm:min-h-[300px] sm:pb-20 sm:pt-36">
+        <div className="mx-auto max-w-3xl text-center text-forest-950">
+          <p className="eyebrow">{place.category}</p>
           <h1 className="mt-4 font-serif text-[1.6875rem] font-semibold sm:text-[2.25rem] md:text-[2.8125rem]">
             {place.name}
           </h1>
-          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-sand-100/90">
+          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-stone-soft">
             {place.blurb}
           </p>
         </div>

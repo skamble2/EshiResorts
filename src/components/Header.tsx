@@ -57,7 +57,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-gold-400 ${
+                className={`text-xs uppercase tracking-wider transition-colors hover:text-gold-400 ${
                   active ? "text-gold-400" : "text-sand-100"
                 }`}
               >
@@ -103,7 +103,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="border-b border-forest-700/40 py-3 text-sand-100"
+              className="border-b border-forest-700/40 py-3 text-xs uppercase tracking-wider text-sand-100"
             >
               {item.label}
             </Link>

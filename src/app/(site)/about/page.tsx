@@ -104,8 +104,7 @@ export default function AboutPage() {
 
           <Reveal className="mt-12 space-y-6">
             <p className="text-base leading-relaxed text-sand-200/90 sm:text-lg sm:leading-relaxed">
-              <span className="font-semibold text-sand-50">CA Pravin Bangar</span>,
-              owner of Eshi Resorts, is a Chartered Accountant and a
+              CA Pravin Bangar, owner of Eshi Resorts, is a Chartered Accountant and a
               professional associated with RERA, who regularly shares his
               knowledge through lectures and seminars. That journey shaped a
               strong belief in ethics, responsibility and creating lasting
@@ -122,18 +121,14 @@ export default function AboutPage() {
             </p>
           </Reveal>
 
-          {/* The one idea a reader should leave with, set apart from the prose */}
-          <Reveal className="my-12 border-l-2 border-gold-500 pl-6 sm:pl-8">
-            <p className="font-serif text-xl leading-relaxed text-sand-50 sm:text-2xl sm:leading-relaxed">
+          <Reveal className="mt-6 space-y-6">
+            <p className="text-base leading-relaxed text-sand-200/90 sm:text-lg sm:leading-relaxed">
               While developing Eshi Resorts, conscious efforts were made to
               preserve the existing trees and design the resort around them. The
               trees, fresh mountain air, birdsong and greenery are not merely
               the surroundings of Eshi - they are its greatest asset and its
               soul.
             </p>
-          </Reveal>
-
-          <Reveal className="space-y-6">
             <p className="text-base leading-relaxed text-sand-200/90 sm:text-lg sm:leading-relaxed">
               Eshi offers a different kind of luxury: waking up to greenery,
               listening to birds, feeling the natural breeze, walking among
@@ -153,7 +148,7 @@ export default function AboutPage() {
 
           {/* Closing manifesto - four short lines, given room to land */}
           <Reveal className="mt-14 text-center">
-            <ul className="space-y-3 font-serif text-2xl leading-snug text-sand-50 sm:text-3xl">
+            <ul className="space-y-3 text-lg leading-relaxed text-sand-50 sm:text-xl">
               <li>Nature is not our decoration.</li>
               <li>Nature is our identity.</li>
               <li>Nature is our greatest asset.</li>
