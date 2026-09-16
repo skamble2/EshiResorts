@@ -31,10 +31,12 @@ export const site = {
 
   // Verified ratings (for the reviews page) - static fallbacks; the Google
   // figure goes live automatically once GOOGLE_MAPS_API_KEY is set.
+  // Booking.com and Tripadvisor are read by hand - check them when the Google
+  // figure moves. Last verified 16 Sep 2026.
   ratings: {
-    google: { score: "4.6", count: 164 },
-    booking: { score: "8.6", count: 123 },
-    tripadvisor: { score: "5.0", count: 2 },
+    google: { score: "4.5", count: 322 },
+    booking: { score: "8.4", count: 134 },
+    tripadvisor: { score: "5.0", count: 4 },
   },
 
   logo: "/images/home/logo-mark.png", // green brand mark; for social cards and structured data
