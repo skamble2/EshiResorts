@@ -56,7 +56,6 @@ export default function AboutPage() {
         eyebrow="Our Story"
         title="Where luxury meets the wild"
         subtitle="A sanctuary for rejuvenation, adventure and soulful connection with nature."
-        image="/images/brochure/valley-mist.jpg"
       />
 
       {/* Intro */}
@@ -89,6 +88,82 @@ export default function AboutPage() {
                 className="object-cover"
               />
             </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ---------------- The vision ---------------- */}
+      <section className="border-y border-sand-200 bg-forest-950 py-20 text-sand-100 md:py-28">
+        <div className="mx-auto max-w-3xl px-6 sm:px-8">
+          <Reveal className="text-center">
+            <p className="eyebrow text-gold-400">The Vision</p>
+            <h2 className="mt-4 font-serif text-3xl font-semibold leading-snug text-sand-50 sm:text-4xl">
+              The vision behind Eshi Resorts
+            </h2>
+          </Reveal>
+
+          <Reveal className="mt-12 space-y-6">
+            <p className="text-base leading-relaxed text-sand-200/90 sm:text-lg sm:leading-relaxed">
+              <span className="font-semibold text-sand-50">CA Pravin Bangar</span>,
+              owner of Eshi Resorts, is a Chartered Accountant and a
+              professional associated with RERA, who regularly shares his
+              knowledge through lectures and seminars. That journey shaped a
+              strong belief in ethics, responsibility and creating lasting
+              value.
+            </p>
+            <p className="text-base leading-relaxed text-sand-200/90 sm:text-lg sm:leading-relaxed">
+              With this philosophy, he envisioned Eshi Resorts - not merely as a
+              resort, but as a place where people can reconnect with nature.
+            </p>
+            <p className="text-base leading-relaxed text-sand-200/90 sm:text-lg sm:leading-relaxed">
+              For Eshi, true luxury is not only about beautiful rooms, modern
+              amenities and excellent hospitality. It is also about something
+              that cannot be manufactured - nature.
+            </p>
+          </Reveal>
+
+          {/* The one idea a reader should leave with, set apart from the prose */}
+          <Reveal className="my-12 border-l-2 border-gold-500 pl-6 sm:pl-8">
+            <p className="font-serif text-xl leading-relaxed text-sand-50 sm:text-2xl sm:leading-relaxed">
+              While developing Eshi Resorts, conscious efforts were made to
+              preserve the existing trees and design the resort around them. The
+              trees, fresh mountain air, birdsong and greenery are not merely
+              the surroundings of Eshi - they are its greatest asset and its
+              soul.
+            </p>
+          </Reveal>
+
+          <Reveal className="space-y-6">
+            <p className="text-base leading-relaxed text-sand-200/90 sm:text-lg sm:leading-relaxed">
+              Eshi offers a different kind of luxury: waking up to greenery,
+              listening to birds, feeling the natural breeze, walking among
+              trees and taking a break from the pace of city life.
+            </p>
+            <p className="text-base leading-relaxed text-sand-200/90 sm:text-lg sm:leading-relaxed">
+              We also encourage our guests to become part of this philosophy by
+              reducing plastic, using electricity thoughtfully, respecting the
+              trees and experiencing the natural environment responsibly.
+            </p>
+            <p className="text-base leading-relaxed text-sand-200/90 sm:text-lg sm:leading-relaxed">
+              For us, success is not only when a guest leaves with wonderful
+              memories, but also when they leave with a little more awareness
+              and respect for nature.
+            </p>
+          </Reveal>
+
+          {/* Closing manifesto - four short lines, given room to land */}
+          <Reveal className="mt-14 text-center">
+            <ul className="space-y-3 font-serif text-2xl leading-snug text-sand-50 sm:text-3xl">
+              <li>Nature is not our decoration.</li>
+              <li>Nature is our identity.</li>
+              <li>Nature is our greatest asset.</li>
+              <li className="text-gold-400">
+                And nature is our greatest luxury.
+              </li>
+            </ul>
+            <p className="mt-10 text-xs uppercase tracking-wider2 text-sand-200/60">
+              Eshi Resorts, Bhimashankar
+            </p>
           </Reveal>
         </div>
       </section>

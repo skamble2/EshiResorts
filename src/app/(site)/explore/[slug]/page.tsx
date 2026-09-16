@@ -46,23 +46,11 @@ export default async function PlacePage({
 
   return (
     <>
-      {/* Hero - the photo where we have one, the name alone where we do not */}
-      <section className="relative flex h-[52vh] min-h-[360px] items-center justify-center overflow-hidden bg-forest-900">
-        {place.image && (
-          <>
-            <Image
-              src={place.image}
-              alt={place.name}
-              fill
-              priority
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-forest-950/65" />
-          </>
-        )}
-        <div className="relative z-10 mx-auto max-w-3xl px-6 text-center text-sand-50">
+      {/* Heading on colour, matching every other page */}
+      <section className="flex min-h-[260px] items-center justify-center bg-forest-950 px-6 pb-16 pt-32 sm:min-h-[300px] sm:pb-20 sm:pt-36">
+        <div className="mx-auto max-w-3xl text-center text-sand-50">
           <p className="eyebrow text-gold-400">{place.category}</p>
-          <h1 className="mt-4 font-serif text-4xl font-semibold sm:text-5xl md:text-6xl">
+          <h1 className="mt-4 font-serif text-[1.6875rem] font-semibold sm:text-[2.25rem] md:text-[2.8125rem]">
             {place.name}
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-sand-100/90">
@@ -70,6 +58,20 @@ export default async function PlacePage({
           </p>
         </div>
       </section>
+
+      {/* The photo shown properly, rather than washed out behind the title */}
+      {place.image && (
+        <div className="relative aspect-[16/9] w-full sm:aspect-[21/9]">
+          <Image
+            src={place.image}
+            alt={place.name}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+      )}
 
       {/* Practical facts first - the thing a guest actually needs */}
       <section className="border-b border-sand-200 bg-sand-100">

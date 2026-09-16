@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Kalam, Rye } from "next/font/google";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { site } from "@/content/site";
 
@@ -9,25 +9,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+// Classical high-contrast serif matching the logo's "ESHI" lettering.
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
-  display: "swap",
-});
-
-// Handwritten script used for the brand tagline (matches the logo's lettering).
-const kalam = Kalam({
-  variable: "--font-kalam",
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-});
-
-// Decorative Tuscan display face matching the logo's "ESHI RESORT'S" lettering.
-const rye = Rye({
-  variable: "--font-rye",
-  subsets: ["latin"],
-  weight: "400",
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -61,7 +47,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${playfair.variable} ${kalam.variable} ${rye.variable} h-full antialiased`}
+      className={`${inter.variable} ${cormorant.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-sand-50 text-ink">{children}</body>
     </html>

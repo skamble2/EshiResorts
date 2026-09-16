@@ -18,7 +18,6 @@ export default function GalleryPage() {
         eyebrow="Gallery"
         title="A glimpse of Eshi"
         subtitle="Misty valleys, jungle trails, golden sunsets and luxurious rooms - the spirit of the wild, captured."
-        image="/images/brochure/valley-mist.jpg"
       />
 
       {/* Resort film - click to play, never autoplays */}

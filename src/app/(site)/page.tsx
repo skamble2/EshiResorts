@@ -20,10 +20,10 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-forest-950/70 via-forest-950/40 to-forest-950/80" />
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center text-sand-50">
-          <h1 className="font-display text-5xl leading-tight sm:text-7xl md:text-8xl">
+          <h1 className="font-display text-[2.25rem] leading-tight sm:text-[3.375rem] md:text-[4.5rem]">
             Eshi Resorts
           </h1>
-          <p className="mt-5 font-script text-2xl text-gold-400 sm:text-3xl md:text-4xl">
+          <p className="mt-6 font-serif text-sm uppercase tracking-wider2 text-gold-400 sm:text-base md:text-lg">
             Bhimashankar&apos;s Jungle Luxury Resort
           </p>
           <div className="mt-7">

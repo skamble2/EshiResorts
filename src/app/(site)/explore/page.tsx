@@ -19,7 +19,6 @@ export default function ExplorePage() {
         eyebrow="Explore"
         title="Nearby places to visit"
         subtitle="A Jyotirlinga, a wildlife sanctuary, forts, caves and cloud-covered viewpoints - all within reach of the resort."
-        image="/images/brochure/green-hills.jpg"
       />
 
       <section className="mx-auto max-w-3xl px-6 pt-16 text-center sm:px-8 md:pt-20">

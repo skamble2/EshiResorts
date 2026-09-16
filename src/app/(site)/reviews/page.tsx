@@ -52,7 +52,6 @@ export default async function ReviewsPage() {
         eyebrow="Guest Reviews"
         title="Loved by our guests"
         subtitle="Real stories from those who've stayed with us. We're honoured to have been part of your journey."
-        image="/images/gallery/room-3.jpg"
       />
 
       {/* Rating summary */}

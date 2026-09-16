@@ -27,7 +27,6 @@ export default async function BlogPage() {
         eyebrow="Journal"
         title="The Eshi Blog"
         subtitle="Stories from the Sahyadris - jungle walks, changing seasons, food, and tips for your stay."
-        image="/images/brochure/forest-trail.jpg"
       />
 
       <section className="mx-auto max-w-7xl px-6 py-16 sm:px-8 md:py-20">

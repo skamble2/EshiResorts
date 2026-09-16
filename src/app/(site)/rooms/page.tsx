@@ -17,7 +17,6 @@ export default function RoomsPage() {
         eyebrow="Accommodation"
         title="Rooms in Harmony with Nature"
         subtitle="Stay surrounded by serenity - warm, earthy interiors and large windows that invite the misty Sahyadri valleys right in."
-        image="/images/gallery/room-1.jpg"
       />
 
       <section className="mx-auto max-w-7xl px-6 py-20 sm:px-8 md:py-24">

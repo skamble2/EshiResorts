@@ -61,7 +61,6 @@ export default function ContactPage() {
         eyebrow="Get in Touch"
         title="Contact Us"
         subtitle="We'd love to help plan your escape to Bhimashankar. Reach out any way you like."
-        image="/images/gallery/exterior-5.jpg"
       />
 
       {/* Contact channel cards */}
