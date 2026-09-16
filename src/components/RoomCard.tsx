@@ -7,6 +7,9 @@ import { type Room, amenityMeta } from "@/content/rooms";
 import BookNowButton from "./BookNowButton";
 import RoomDetailModal from "./RoomDetailModal";
 
+// Icons shown on the card itself; the rest are summarised as "+N more".
+const CARD_AMENITIES = 7;
+
 export default function RoomCard({ room }: { room: Room }) {
   const [open, setOpen] = useState(false);
 
@@ -58,9 +61,10 @@ export default function RoomCard({ room }: { room: Room }) {
             {room.blurb}
           </p>
 
-          {/* Amenity icons (resort's own icon set) */}
-          <ul className="mt-5 flex flex-wrap gap-x-4 gap-y-2.5 border-t border-sand-200 pt-4">
-            {room.amenities.map((key) => {
+          {/* Amenity icons (resort's own icon set) - the card shows the
+              distinctive ones; the detail modal lists every amenity. */}
+          <ul className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2.5 border-t border-sand-200 pt-4">
+            {room.amenities.slice(0, CARD_AMENITIES).map((key) => {
               const a = amenityMeta[key];
               return (
                 <li
@@ -79,6 +83,11 @@ export default function RoomCard({ room }: { room: Room }) {
                 </li>
               );
             })}
+            {room.amenities.length > CARD_AMENITIES && (
+              <li className="text-xs font-medium text-stone-soft">
+                +{room.amenities.length - CARD_AMENITIES} more
+              </li>
+            )}
           </ul>
 
           <div

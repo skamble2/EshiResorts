@@ -11,8 +11,8 @@ export default function Footer() {
             <Image
               src="/images/home/logo.png"
               alt="Eshi Resorts"
-              width={203}
-              height={250}
+              width={333}
+              height={378}
               className="h-12 w-auto brightness-0 invert"
             />
             <span className="font-serif text-2xl font-semibold text-sand-50">
@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="eyebrow mb-4">Explore</h4>
+          <h4 className="eyebrow mb-4">Browse</h4>
           <ul className="space-y-2.5 text-sm">
             {site.nav.map((item) => (
               <li key={item.href}>

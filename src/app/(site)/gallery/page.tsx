@@ -3,6 +3,7 @@ import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import BookNowButton from "@/components/BookNowButton";
 import GalleryGrid from "@/components/GalleryGrid";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -36,6 +37,24 @@ export default function GalleryPage() {
             playsInline
             poster="/images/slideshow/slide-1.jpg"
             className="aspect-video w-full rounded-2xl bg-forest-950 object-cover shadow-lg ring-1 ring-sand-200"
+          />
+        </Reveal>
+
+        <Reveal className="mx-auto mt-20 max-w-2xl text-center">
+          <p className="eyebrow">Guest Film</p>
+          <h2 className="mt-4 font-serif text-3xl font-semibold text-forest-900 sm:text-4xl">
+            A staycation at Eshi
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-stone-soft">
+            NH247 spent a weekend with us and filmed the whole thing - the
+            rooms, the food and the forest around them.
+          </p>
+        </Reveal>
+        <Reveal className="mt-10">
+          <YouTubeEmbed
+            id="wW2eIR8T4QQ"
+            title="Eshi Resorts Bhimashankar - Staycation Vlog by NH247"
+            poster="/images/gallery/vlog-poster.jpg"
           />
         </Reveal>
       </section>

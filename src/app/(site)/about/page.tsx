@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import BookNowButton from "@/components/BookNowButton";
+import PlaceCard from "@/components/PlaceCard";
+import { places } from "@/content/places";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -169,7 +172,7 @@ export default function AboutPage() {
           <Reveal delay={0.15} className="md:order-1">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
               <Image
-                src="/images/slideshow/slide-2.jpg"
+                src="/images/rooms/sahyadri-horizon-premium-king-room/7.jpg"
                 alt="Canopy bed in a luxury room at Eshi Resorts"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -247,8 +250,42 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ---------------- Beyond the resort ---------------- */}
+      <section className="bg-sand-100 py-20 md:py-24">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className="eyebrow">Beyond the Resort</p>
+            <h2 className="mt-4 font-serif text-3xl font-semibold text-forest-900 sm:text-4xl">
+              There is a whole region to wander
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-stone-soft">
+              A Jyotirlinga temple fourteen kilometres away, a wildlife
+              sanctuary at the doorstep, forts, caves and cloud-covered
+              viewpoints. Several of our rooms are named after them.
+            </p>
+          </Reveal>
+
+          <div className="mt-12 grid auto-rows-fr gap-7 sm:grid-cols-2 lg:grid-cols-3">
+            {places.slice(0, 3).map((place, i) => (
+              <Reveal key={place.slug} delay={(i % 3) * 0.1}>
+                <PlaceCard place={place} />
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              href="/explore"
+              className="inline-flex items-center justify-center rounded-full border border-forest-700/30 px-8 py-3 text-sm font-semibold text-forest-800 transition-colors hover:bg-forest-800 hover:text-sand-50"
+            >
+              All Places to Visit
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="mx-auto max-w-3xl px-6 pb-20 text-center sm:px-8">
+      <section className="mx-auto max-w-3xl px-6 py-20 text-center sm:px-8">
         <Reveal>
           <h2 className="font-serif text-3xl font-semibold text-forest-900 sm:text-4xl">
             Come experience it for yourself

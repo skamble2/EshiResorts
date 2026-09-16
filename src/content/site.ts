@@ -37,7 +37,7 @@ export const site = {
     tripadvisor: { score: "5.0", count: 2 },
   },
 
-  logo: "/images/home/header-logo.png", // black wordmark; inverted to white on dark bg
+  logo: "/images/home/logo-mark.png", // green brand mark; for social cards and structured data
 
   brochureUrl: "/files/eshi-resorts-brochure.pdf",
 
@@ -45,6 +45,7 @@ export const site = {
     { label: "Home", href: "/" },
     { label: "Rooms", href: "/rooms" },
     { label: "About", href: "/about" },
+    { label: "Explore", href: "/explore" },
     { label: "Gallery", href: "/gallery" },
     { label: "Blog", href: "/blog" },
     { label: "Reviews", href: "/reviews" },

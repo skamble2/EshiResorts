@@ -38,8 +38,8 @@ export default function Header() {
           <Image
             src="/images/home/logo.png"
             alt="Eshi Resorts"
-            width={203}
-            height={250}
+            width={333}
+            height={378}
             priority
             className={`w-auto brightness-0 invert transition-all duration-300 ${
               transparent ? "h-14 sm:h-16" : "h-11 sm:h-12"
