@@ -46,6 +46,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------------- Resort film ---------------- */}
+      <section className="mx-auto max-w-5xl px-6 py-16 sm:px-8 md:py-20">
+        <Reveal>
+          <video
+            src="/videos/resort-film.mp4"
+            controls
+            preload="none"
+            playsInline
+            poster="/images/home/film-poster.jpg"
+            className="aspect-video w-full rounded-2xl bg-forest-950 object-cover shadow-lg ring-1 ring-sand-200"
+          />
+        </Reveal>
+      </section>
+
       {/* ---------------- Stats bar ---------------- */}
       <section className="bg-forest-900 text-sand-50">
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-y-6 px-6 py-8 sm:px-8 md:grid-cols-4">
